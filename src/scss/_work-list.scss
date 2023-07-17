@@ -1,0 +1,113 @@
+.work-list {
+  padding-top: em(70);
+
+  @media (max-width: $breakpoint992) {
+    padding-top: em(40);
+  }
+
+  // .work-list__title
+
+  &__title {
+    margin-bottom: em(25);
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: em(24);
+      text-align: center;
+    }
+  }
+
+  // .work-list__list
+
+  &__list {
+    display: grid;
+    margin-bottom: em(30);
+    counter-reset: work-list;
+  }
+
+  // .work-list__item
+
+  &__item {
+    position: relative;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    border-top: 1px solid var(--grey-color-2);
+    border-bottom: 1px solid var(--grey-color-2);
+
+    &::before {
+      counter-increment: work-list;
+      content: counter(work-list) ". ";
+      // position: absolute;
+      // top: 50%;
+      // left: 0;
+      // transform: translateY(-50%);
+      font-family: var(--font-secondary);
+      font-weight: 700;
+      font-size: rem(20);
+      line-height: rem(22);
+      letter-spacing: -0.02em;
+      color: var(--grey-color);
+    }
+  }
+
+  // .work-list__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: em(24) em(10);
+    font-family: var(--font-secondary);
+    font-weight: 700;
+    font-size: rem(20);
+    line-height: rem(22);
+    letter-spacing: -0.02em;
+    color: var(--main-color);
+
+    &:hover {
+      background: rgba(50, 136, 180, 0.05);
+
+      & svg path {
+        stroke: var(--main-color);
+      }
+    }
+
+    @media (max-width: $breakpoint768) {
+      padding: em(20) em(10);
+      padding-left: em(20);
+    }
+  }
+
+  // .work-list__num
+
+  &__num {}
+
+  // .work-list__item-arrow
+
+  &__item-arrow {}
+
+  // .work-list__more
+
+  &__more {}
+}
+
+.work-list__add-container {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  width: 100%;
+  padding: 20px 20px 20px;
+  background-color: var(--white-color);
+}
+
+.first-screen__link--add {
+  width: 1180px;
+  margin: 0 auto;
+
+  &:hover {
+    background-image: linear-gradient(268.89deg, #58c0d7 0, #3f98ce 100%);
+  }
+}

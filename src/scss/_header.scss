@@ -1,1 +1,54 @@
-// Header
+// Header enter
+
+.header {
+  border-radius: 0px 0px 15px 15px;
+  background: rgba(88, 192, 215, 0.10);
+}
+
+.nav {
+  padding: em(20) 0;
+
+  // .nav__link
+
+  &__link {
+    display: flex;
+    align-items: center;
+    column-gap: em(10);
+  }
+
+  // .nav__link-text
+
+  &__link-text {
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: rem(22);
+    color: var(--white-color);
+  }
+}
+
+.nav-exit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-cards {
+  display: flex;
+  align-items: center;
+  column-gap: 76px;
+
+  & .nav__link:nth-child(2) {
+
+    .nav__link-text {
+      color: var(--main-color);
+    }
+  }
+
+  & .nav__link:nth-child(3) {
+    margin-left: auto;
+
+    .nav__link-text {
+      color: var(--text-color);
+    }
+  }
+}

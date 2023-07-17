@@ -1,4 +1,13 @@
 // Footer
-footer {
-    display: block;
+.footer {
+  padding: em(25) 0;
+}
+
+.footer__copy {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: rem(12);
+  line-height: rem(16);
+  color: var(--grey-color);
 }

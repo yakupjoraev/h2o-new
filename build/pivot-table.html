@@ -1,0 +1,1191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/graph-modal.min.css">
+  <link rel="stylesheet" href="./css/jquery-ui.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body">
+  <!-- Header -->
+  <header class="header">
+  <div class="container">
+    <nav class="nav nav-exit">
+      <a class="nav__link" href="#">
+        <svg width="16" height="14" viewBox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 7H15M1 7L7 1M1 7L7 13" stroke="white" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+
+        <span class="nav__link-text">Назад</span>
+      </a>
+
+      <a class="nav__link" href="#">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7 14L11 10M11 10L7 6M11 10H1M10 19H14.2C15.8802 19 16.7202 19 17.362 18.673C17.9265 18.3854 18.3854 17.9265 18.673 17.362C19 16.7202 19 15.8802 19 14.2V5.8C19 4.11984 19 3.27976 18.673 2.63803C18.3854 2.07354 17.9265 1.6146 17.362 1.32698C16.7202 1 15.8802 1 14.2 1H10"
+            stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="nav__link-text">Выход</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Main Page -->
+  <main>
+    <section class="pivot-table">
+  <div class="container">
+    <div class="pivot-table__inner">
+      <div class="pivot-table__top">
+        <h1 class="pivot-table__title main-title">
+          Сводная таблица
+        </h1>
+
+        <a class="pivot-table__export btn-primary" href="#" data-graph-path="export-table">
+          <span class="pivot-table__export-icon">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M14 5L10 1M10 1L6 5M10 1V11M19 10V14.2C19 15.8802 19 16.7202 18.673 17.362C18.3854 17.9265 17.9265 18.3854 17.362 18.673C16.7202 19 15.8802 19 14.2 19H5.8C4.11984 19 3.27976 19 2.63803 18.673C2.07354 18.3854 1.6146 17.9265 1.32698 17.362C1 16.7202 1 15.8802 1 14.2V10"
+                stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+          </span>
+
+          <span class="pivot-table__export-text">
+            Экспорт таблицы в XML
+          </span>
+        </a>
+      </div>
+
+      <form class="pivot-table__form table-form" action="#">
+
+        <div class="table-form__top">
+          <div class="table-form__datepickers">
+            <div class="table-form__datepicker">
+              <p class="table-form__datepicker-text">Показать период с</p>
+              <input class="table-form__datepicker-input input" type="text" id="datepicker-1" placeholder="25.10.22">
+            </div>
+
+            <div class="table-form__datepicker">
+              <div class="table-form__datepicker">
+                <p class="table-form__datepicker-text">по</p>
+                <input class="table-form__datepicker-input input" type="text" id="datepicker-2" placeholder="25.01.23">
+              </div>
+            </div>
+
+          </div>
+
+          <div class="table-form__select-group input-group input">
+            <select class="table-form__select add-entry__select" name="select-user" id="select-user">
+              <option class="table-form__select-option add-entry__select-option" value="select-user-1">Выбрать мастера
+              </option>
+              <option class="table-form__select-option add-entry__select-option" value="select-user-2">Выбрать ученика
+              </option>
+              <option class="table-form__select-option add-entry__select-option" value="select-user-3">Выбрать подавана
+              </option>
+              <option class="table-form__select-option add-entry__select-option" value="select-user-4">Выбрать джедая
+              </option>
+            </select>
+          </div>
+
+          <div class="table-form__num-group">
+            <input class="table-form__input input" type="text" placeholder="Заводской номер">
+            <label class="table-form__label label" for="" style="position: absolute; 
+              opacity: 0;
+              user-select: none;
+              pointer-events: none;">
+              Заводской номер
+            </label>
+          </div>
+
+          <button class="table-form__btn btn-disable">Применить</button>
+        </div>
+
+        <div class="table-form__bottom">
+          <label class="table-form__label radio-label" for="table-form-checkbox">
+            <input class="table-form__checkbox radio-input" type="checkbox" id="table-form-checkbox">
+            <div class="table-form__label-decor radio-decor">
+
+            </div>
+
+            <p class="table-form__label-descr radio-descr">
+              Только отчеты за сегодня
+            </p>
+          </label>
+
+          <div class="table-form__select">
+            <label class="table-form__select-label" for="table-form-select"></label>
+            <select class="table-form__select-select" name="sorting" id="table-form-select">
+              <option selected="selected">Сначала новые</option>
+              <option>Сначала</option>
+              <option>новые</option>
+              <option>Старые</option>
+              <option>Пожилые</option>
+            </select>
+          </div>
+        </div>
+
+
+
+      </form>
+
+      <div class="pivot-table__main">
+        <div class="pivot-table__content">
+          <ul class="pivot-table__list">
+            <li class="pivot-table__item pivot-table__item--header">
+              <div class="pivot-table__item-info info-column__1"></div>
+              <div class="pivot-table__item-info info-column__2">Дата</div>
+              <div class="pivot-table__item-info info-column__3">Дата дейст. поверки</div>
+              <div class="pivot-table__item-info info-column__3">Номер эталона</div>
+              <div class="pivot-table__item-info info-column__3">Номер в Госреестре</div>
+              <div class="pivot-table__item-info info-column__3">Модификация</div>
+              <div class="pivot-table__item-info info-column__2">Заводской номер</div>
+              <div class="pivot-table__item-info info-column__2">ГВС/ХВС</div>
+              <div class="pivot-table__item-info info-column__3">Владелец</div>
+              <div class="pivot-table__item-info info-column__4">Наим. док. на осн. которого выполнена поверка</div>
+              <div class="pivot-table__item-info info-column__3">Пригодность СИ</div>
+              <div class="pivot-table__item-info info-column__2">Температура</div>
+              <div class="pivot-table__item-info info-column__2">Давление</div>
+              <div class="pivot-table__item-info info-column__2">Влажность</div>
+              <div class="pivot-table__item-info info-column__1">Фото</div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+
+            <li class="pivot-table__item">
+              <div class="pivot-table__item-info pivot-table__item-info--change js-modal-btn info-column__1"
+                data-graph-path="edit-post">
+                <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                    stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="pivot-table__item-info info-column__2">25.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">27.01.2022</div>
+              <div class="pivot-table__item-info info-column__3">08959-4567</div>
+              <div class="pivot-table__item-info info-column__3">37303-08</div>
+              <div class="pivot-table__item-info info-column__3">Росич ВКМ-15</div>
+              <div class="pivot-table__item-info info-column__2">00813079</div>
+              <div class="pivot-table__item-info info-column__2">ГВС</div>
+              <div class="pivot-table__item-info info-column__3">ООО “Генезис”</div>
+              <div class="pivot-table__item-info info-column__4">МИ № 1592-2015</div>
+              <div class="pivot-table__item-info info-column__3">Пригоден</div>
+              <div class="pivot-table__item-info info-column__2">25.00</div>
+              <div class="pivot-table__item-info info-column__2">95.00</div>
+              <div class="pivot-table__item-info info-column__2">50.00</div>
+              <div class="pivot-table__item-info  info-column__1 pivot-table__item-info--view"
+                data-graph-path="added-picture">
+                <img class="pivot-table__item-img" src="./img/icons/eye.svg" alt="eye">
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <nav class="pivot-table__nav nav-table">
+          <div class="nav-table__info">
+            <span class="nav-table__info-text">
+              Показано отчетов
+            </span>
+
+            <span class="nav-table__info-count">
+              12 из 356
+            </span>
+          </div>
+
+          <div class="nav-table__pages">
+            <a class="nav-table__prev" href="#">
+              <img class="nav-table__prev-img" src="./img/icons/arrow-prev.svg" alt="prev">
+            </a>
+
+            <ul class="nav-table__list">
+              <li class="nav-table__item nav-table__item--active">
+                <a class="nav-table__item-num" href="#">1</a>
+              </li>
+
+              <li class="nav-table__item">
+                <a class="nav-table__item-num" href="#">2</a>
+              </li>
+
+              <li class="nav-table__item">
+                <a class="nav-table__item-num" href="#">3</a>
+              </li>
+
+              <li class="nav-table__item">
+                <a class="nav-table__item-num" href="#">4</a>
+              </li>
+
+              <li class="nav-table__item">
+                <a class="nav-table__item-num" href="#">...</a>
+              </li>
+
+              <li class="nav-table__item">
+                <a class="nav-table__item-num" href="#">29</a>
+              </li>
+            </ul>
+
+            <a class="nav-table__next" href="#">
+              <img class="nav-table__next-img" src="./img/icons/arrow-next.svg" alt="next">
+            </a>
+          </div>
+        </nav>
+      </div>
+
+    </div>
+  </div>
+</section>
+    <div class="graph-modal">
+
+
+  <!-- разметка для Экспорт таблицы -->
+  <div class="graph-modal__container graph-modal__container--little" role="dialog" aria-modal="true"
+    data-graph-target="export-table">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <form action="#" class="export-table">
+        <h3 class="export-table__title">
+          Экспорт таблицы
+        </h3>
+
+        <p class="export-table__descr">
+          Выберите период для экспорта
+        </p>
+
+        <div class="export-table__datepickers">
+          <div class="export-table__datepicker">
+            <p class="export-table__datepicker-text">с</p>
+            <input class="export-table__datepicker-input input" type="text" id="datepicker-5" placeholder="25.10.22">
+          </div>
+          <div class="export-table__datepicker">
+            <p class="export-table__datepicker-text">по</p>
+            <input class="export-table__datepicker-input input" type="text" id="datepicker-6" placeholder="25.01.23">
+          </div>
+        </div>
+
+        <button type="button" class="export-table__btn btn-disable">Скачать таблицу за период .xml</button>
+        <button type="button" class="export-table__btn btn-primary">Скачать таблицу за сегодня .xml </button>
+      </form>
+
+    </div>
+  </div>
+
+
+
+  <!-- второй модал после успешной загрузки таблицы -->
+  <div class="graph-modal__container graph-modal__container--text" role="dialog" aria-modal="true"
+    data-graph-target="export-table-true">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <p class="export-table-true">
+        Экспорт выполнен успешно.
+        Файл добавлен в загрузки
+      </p>
+    </div>
+  </div>
+
+
+
+  <!-- разметка для страницы  Сводная таблица -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="edit-post">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <div class="edit-post">
+        <h1 class="edit-post__title second-title ">
+          Редактировать запись
+        </h1>
+
+        <form class="edit-post__form" action="#">
+          <div class="edit-post__header">
+            <div class="edit-post__group input-group">
+              <div class="edit-post__datepicker">
+                <input class="edit-post__datepicker-input input" type="text" id="datepicker-3" placeholder="Дата"
+                  value="25.01.22">
+                <label class="edit-post__label label" for="">Дата</label>
+              </div>
+            </div>
+
+            <div class="edit-post__group input-group">
+              <div class="edit-post__datepicker">
+                <input class="edit-post__datepicker-input input" type="text" id="datepicker-4"
+                  placeholder="Дата действительности поверки" value="27.01.22">
+                <label class="edit-post__label label" for="">Дата действительности поверки</label>
+              </div>
+            </div>
+
+            <div class="edit-post__group input-group">
+              <input class="edit-post__input input" type="text" placeholder="Номер эталона" value="08959-4567">
+              <label class="edit-post__label label" for="">Номер эталона</label>
+            </div>
+
+            <div class="edit-post__group input-group">
+              <input class="edit-post__input input" type="text" placeholder="Номер в Госреестре" value="37303-08">
+              <label class="edit-post__label label" for="">Номер в Госреестре</label>
+            </div>
+
+            <div class="edit-post__group input-group input">
+              <select class="edit-post__select" name="modification">
+                <option class="edit-post__select-option" value="mod-1">1Росич ВКМ-15</option>
+                <option class="edit-post__select-option" value="mod-2">2Росич ВКМ-15</option>
+                <option class="edit-post__select-option" value="mod-3">3Росич ВКМ-15</option>
+                <option class="edit-post__select-option" value="mod-4">3Росич ВКМ-15</option>
+              </select>
+              <label class="edit-post__label label" for="">Модификация</label>
+            </div>
+
+            <div class="edit-post__group input-group">
+              <input class="edit-post__input input" type="text" placeholder="Заводской номер" value="00813079">
+              <label class="edit-post__label label" for="">Заводской номер</label>
+            </div>
+          </div>
+
+          <div class="edit-post__header-radio">
+            <div class="edit-post__group edit-post__group--radio radio-group">
+              <span class="edit-post__type radio-type">
+                Тип водоснабжения
+              </span>
+
+
+              <label class="edit-post__radio-label radio-label" for="type-water-edit1">
+                <input class="edit-post__radio radio-input" type="radio" name="type-water-edit" id="type-water-edit1"
+                  checked>
+                <div class="edit-post__radio-decor radio-decor"></div>
+                <span class="edit-post__radio-descr radio-descr">ГВС</span>
+              </label>
+
+              <label class="edit-post__radio-label radio-label" for="type-water-edit2">
+                <input class="edit-post__radio radio-input" type="radio" name="type-water-edit" id="type-water-edit2">
+                <div class="edit-post__radio-decor radio-decor"></div>
+                <span class="edit-post__radio-descr radio-descr">ХВС</span>
+              </label>
+            </div>
+
+            <div class="edit-post__group edit-post__group--radio radio-group">
+              <span class="edit-post__type radio-type">
+                Владелец
+              </span>
+
+
+              <label class="edit-post__radio-label radio-label" for="owner-edit1">
+                <input class="edit-post__radio radio-input" type="radio" name="type-owner-edit" id="owner-edit1">
+                <div class="edit-post__radio-decor radio-decor"></div>
+                <span class="edit-post__radio-descr radio-descr">Физ. лицо</span>
+              </label>
+
+              <label class="edit-post__radio-label radio-label" for="owner-edit2">
+                <input class="edit-post__radio radio-input" type="radio" name="type-owner-edit" id="owner-edit2"
+                  checked>
+                <div class="edit-post__radio-decor radio-decor"></div>
+                <span class="edit-post__radio-descr radio-descr">Юр. лицо</span>
+              </label>
+            </div>
+          </div>
+
+          <div class="edit-post__group input-group">
+            <input class="edit-post__input input" type="text" placeholder="Владелец" value="ООО “Генезис”">
+            <label class="edit-post__label label" for="">Владелец</label>
+          </div>
+
+          <div class="edit-post__middle">
+            <div class="edit-post__middle-top">
+              <div class="edit-post__group input-group">
+                <input class="edit-post__input input" type="text"
+                  placeholder="Наим. док. на осн. которого выполнена поверка" value="МИ № 1592-2015">
+                <label class="edit-post__label label" for="">Наим. док. на осн. которого выполнена поверка</label>
+              </div>
+
+              <div class="edit-post__group edit-post__group--radio radio-group">
+                <span class="edit-post__type radio-type">
+                  Средство измерения
+                </span>
+
+
+                <label class="edit-post__radio-label radio-label" for="suitability1">
+                  <input class="edit-post__radio radio-input" type="radio" name="suitability" id="suitability1" checked>
+                  <div class="edit-post__radio-decor radio-decor"></div>
+                  <span class="edit-post__radio-descr radio-descr">Пригодно</span>
+                </label>
+
+                <label class="edit-post__radio-label radio-label" for="suitability2">
+                  <input class="edit-post__radio radio-input" type="radio" name="suitability" id="suitability2">
+                  <div class="edit-post__radio-decor radio-decor"></div>
+                  <span class="edit-post__radio-descr radio-descr">Непригодно</span>
+                </label>
+              </div>
+            </div>
+
+            <div class="edit-post__middle-bottom">
+              <div class="edit-post__group input-group">
+                <input class="edit-post__input input" type="number" placeholder="Темп. окружающей среды" value="25.00">
+                <label class="edit-post__label label" for="">Темп. окружающей среды</label>
+              </div>
+
+              <div class="edit-post__group input-group">
+                <input class="edit-post__input input" type="number" placeholder="Атмосферное давление" value="95.00">
+                <label class="edit-post__label label" for="">Атмосферное давление</label>
+              </div>
+
+              <div class="edit-post__group input-group">
+                <input class="edit-post__input input" type="number" placeholder="Относительная влажность" value="50.00">
+                <label class="edit-post__label label" for="">Относительная влажность</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="edit-post__footer">
+            <div class="edit-post__btn btn-secondary">
+              <svg width="23" height="16" viewBox="0 0 23 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.5 8C14.5 9.65685 13.1569 11 11.5 11C9.84315 11 8.5 9.65685 8.5 8C8.5 6.34315 9.84315 5 11.5 5C13.1569 5 14.5 6.34315 14.5 8Z"
+                  stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path
+                  d="M11.5004 1C7.02281 1 3.23253 3.94288 1.95825 7.99997C3.23251 12.0571 7.02281 15 11.5005 15C15.9781 15 19.7684 12.0571 21.0426 8.00004C19.7684 3.94291 15.9781 1 11.5004 1Z"
+                  stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Посмотреть фото
+            </div>
+
+            <div class="edit-post__btn-delete">
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 4L14.1991 16.0129C14.129 17.065 14.0939 17.5911 13.8667 17.99C13.6666 18.3412 13.3648 18.6235 13.0011 18.7998C12.588 19 12.0607 19 11.0062 19H6.99377C5.93927 19 5.41202 19 4.99889 18.7998C4.63517 18.6235 4.33339 18.3412 4.13332 17.99C3.90607 17.5911 3.871 17.065 3.80086 16.0129L3 4M1 4H17M13 4L12.7294 3.18807C12.4671 2.40125 12.3359 2.00784 12.0927 1.71698C11.8779 1.46013 11.6021 1.26132 11.2905 1.13878C10.9376 1 10.523 1 9.69357 1H8.30643C7.47705 1 7.06236 1 6.70951 1.13878C6.39792 1.26132 6.12208 1.46013 5.90729 1.71698C5.66405 2.00784 5.53292 2.40125 5.27064 3.18807L5 4"
+                  stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              Удалить фото
+            </div>
+
+            <button type="button" class="edit-post__save btn-disable">Сохранить изменения</button>
+            <button type="button" class="edit-post__delete">Удалить запись</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- разметка для страницы  Справочник средств измерений -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="dimension-edit-post">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <div class="dimension-edit">
+        <h1 class="dimension-edit__title second-title ">
+          Редактировать средство измерения
+        </h1>
+
+        <form class="dimension-edit__form" action="#">
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Номер СИ" value="37303-08">
+            <label class="dimension-edit__label label" for="">Номер СИ</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Наименование СИ" value="08959-4567">
+            <label class="dimension-edit__label label" for="">Наименование СИ</label>
+          </div>
+
+          <div class="dimension-edit__group-container">
+            <div class="dimension-edit__group input-group grid-column__2">
+              <input class="dimension-edit__input input" type="text" placeholder="Обозначение типа СИ"
+                value="Росич ВКМ-15">
+              <label class="dimension-edit__label label" for="">Обозначение типа СИ</label>
+
+              <div class="dimension-edit__input-added">
+                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 7H13M7 1V13" stroke="#3288B4" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round" />
+                </svg>
+
+              </div>
+            </div>
+
+            <div class="dimension-edit__group input-group grid-column__1">
+              <input class="dimension-edit__input input" type="text" placeholder="МПИ ХВС" value="5">
+              <label class="dimension-edit__label label" for="">МПИ ХВС</label>
+            </div>
+
+            <div class="dimension-edit__group input-group grid-column__1">
+              <input class="dimension-edit__input input" type="text" placeholder="МПИ ГВС" value="7">
+              <label class="dimension-edit__label label" for="">МПИ ГВС</label>
+            </div>
+
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Обозначение типа СИ"
+              value="Росич ВКМ-15">
+            <label class="dimension-edit__label label" for="">Обозначение типа СИ</label>
+
+            <div class="dimension-edit__input-added">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 7H13M7 1V13" stroke="#3288B4" stroke-width="2" stroke-linecap="round"
+                  stroke-linejoin="round" />
+              </svg>
+
+            </div>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ХВС" value="5">
+            <label class="dimension-edit__label label" for="">МПИ ХВС</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ГВС" value="7">
+            <label class="dimension-edit__label label" for="">МПИ ГВС</label>
+          </div>
+
+          <div class="dimension-edit__group edit-post__group input-group input grid-column__2">
+            <select class="dimension-edit__select edit-post__select" name="modification">
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-1" selected>1Росич
+                ВКМ-15</option>
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-2">2Росич ВКМ-15
+              </option>
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-3">3Росич ВКМ-15
+              </option>
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-4">3Росич ВКМ-15
+              </option>
+            </select>
+            <label class="edit-post__label label" for="">Дополнительная модификация 1</label>
+
+            <div class="dimension-edit__input-delete">
+              <svg width="18" height="20" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M15 4L14.1991 16.0129C14.129 17.065 14.0939 17.5911 13.8667 17.99C13.6666 18.3412 13.3648 18.6235 13.0011 18.7998C12.588 19 12.0607 19 11.0062 19H6.99377C5.93927 19 5.41202 19 4.99889 18.7998C4.63517 18.6235 4.33339 18.3412 4.13332 17.99C3.90607 17.5911 3.871 17.065 3.80086 16.0129L3 4M1 4H17M13 4L12.7294 3.18807C12.4671 2.40125 12.3359 2.00784 12.0927 1.71698C11.8779 1.46013 11.6021 1.26132 11.2905 1.13878C10.9376 1 10.523 1 9.69357 1H8.30643C7.47705 1 7.06236 1 6.70951 1.13878C6.39792 1.26132 6.12208 1.46013 5.90729 1.71698C5.66405 2.00784 5.53292 2.40125 5.27064 3.18807L5 4"
+                  stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ХВС" value="5">
+            <label class="dimension-edit__label label" for="">МПИ ХВС</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ГВС" value="7">
+            <label class="dimension-edit__label label" for="">МПИ ГВС</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__4">
+            <input class="dimension-edit__input input" type="text" placeholder="Методика" value="МИ № 1592-2015">
+            <label class="dimension-edit__label label" for="">Методика</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Изготовитель"
+              value='ООО "ПК Прибор", г.Москва'>
+            <label class="dimension-edit__label label" for="">Изготовитель</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Поисковые строки" value="-">
+            <label class="dimension-edit__label label" for="">Поисковые строки</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__4">
+            <textarea class="dimension-edit__textarea dimension-edit__input input" placeholder="Примечание"
+              name="Примечание">Поверка проводится по МИ1592-2015 согласно Приказов 135 от 12.12.2016 и 317 от 13.02.2018
+            </textarea>
+            <label class="dimension-edit__label label" for="">Примечание</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text"
+              placeholder="Наим. док. на осн. которого выполнена поверка" value="МИ № 1592-2015">
+            <label class="dimension-edit__label label" for="">Наим. док. на осн. которого выполнена поверка</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Периодичность поверки" value="6 лет">
+            <label class="dimension-edit__label label" for="">Периодичность поверки</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__4">
+            <textarea class="dimension-edit__textarea dimension-edit__input input" placeholder="Основание"
+              name="Основание">Поверка счетчиков при выпуске из производства или после ремонта и в эксплуатации проводится по методике поверки «Расходомеры - счетчики холодной й горячей воды ВСЭ» МП 4218-350-18151455-2006, согласованной с ВНИИМС, 23.06.2006 г Данные взяты из описания типа с ресурса (kip-guide.ru)
+            </textarea>
+            <label class="dimension-edit__label label" for="">Основание</label>
+          </div>
+
+          <button type="button" class="dimension-edit__save edit-post__save btn-disable grid-column__4">Сохранить
+            изменения</button>
+          <button type="button" class="dimension-edit__delete edit-post__delete grid-column__4">Удалить средство
+            измерения</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- разметка для страницы  Справочник средств измерений - Добавить средство измерения в справочник -->
+  <div class="graph-modal__container" role="dialog" aria-modal="true" data-graph-target="added-dimension-post">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <div class="added-dimension dimension-edit">
+        <h1 class="dimension-edit__title second-title ">
+          Добавить средство измерения в справочник
+        </h1>
+
+        <form class="dimension-edit__form" action="#">
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Номер СИ">
+            <label class="dimension-edit__label label" for="">Номер СИ</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Наименование СИ">
+            <label class="dimension-edit__label label" for="">Наименование СИ</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Обозначение типа СИ">
+            <label class="dimension-edit__label label" for="">Обозначение типа СИ</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ХВС">
+            <label class="dimension-edit__label label" for="">МПИ ХВС</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ГВС">
+            <label class="dimension-edit__label label" for="">МПИ ГВС</label>
+          </div>
+
+          <div class="dimension-edit__group-container">
+            <div class="dimension-edit__group edit-post__group input-group input grid-column__2">
+              <select class="dimension-edit__select edit-post__select" name="modification">
+                <option class="dimension-edit__select-option edit-post__select-option" value="mod-1" selected>1Росич
+                  ВКМ-15</option>
+                <option class="dimension-edit__select-option edit-post__select-option" value="mod-2">2Росич ВКМ-15
+                </option>
+                <option class="dimension-edit__select-option edit-post__select-option" value="mod-3">3Росич ВКМ-15
+                </option>
+                <option class="dimension-edit__select-option edit-post__select-option" value="mod-4">3Росич ВКМ-15
+                </option>
+              </select>
+              <label class="edit-post__label label" for="">Дополнительная модификация 1</label>
+            </div>
+
+            <div class="dimension-edit__group input-group grid-column__1">
+              <input class="dimension-edit__input input" type="text" placeholder="МПИ ХВС">
+              <label class="dimension-edit__label label" for="">МПИ ХВС</label>
+            </div>
+
+            <div class="dimension-edit__group input-group grid-column__1">
+              <input class="dimension-edit__input input" type="text" placeholder="МПИ ГВС">
+              <label class="dimension-edit__label label" for="">МПИ ГВС</label>
+            </div>
+          </div>
+
+          <div class="dimension-edit__group edit-post__group input-group input grid-column__2">
+            <select class="dimension-edit__select edit-post__select" name="modification">
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-1" selected>1Росич
+                ВКМ-15</option>
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-2">2Росич ВКМ-15
+              </option>
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-3">3Росич ВКМ-15
+              </option>
+              <option class="dimension-edit__select-option edit-post__select-option" value="mod-4">3Росич ВКМ-15
+              </option>
+            </select>
+            <label class="edit-post__label label" for="">Дополнительная модификация 1</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ХВС">
+            <label class="dimension-edit__label label" for="">МПИ ХВС</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__1">
+            <input class="dimension-edit__input input" type="text" placeholder="МПИ ГВС">
+            <label class="dimension-edit__label label" for="">МПИ ГВС</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__4">
+            <input class="dimension-edit__input input" type="text" placeholder="Методика">
+            <label class="dimension-edit__label label" for="">Методика</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Изготовитель">
+            <label class="dimension-edit__label label" for="">Изготовитель</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Поисковые строки">
+            <label class="dimension-edit__label label" for="">Поисковые строки</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__4">
+            <textarea class="dimension-edit__textarea dimension-edit__input input" placeholder="Примечание"
+              name="Примечание"></textarea>
+            <label class="dimension-edit__label label" for="">Примечание</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text"
+              placeholder="Наим. док. на осн. которого выполнена поверка">
+            <label class="dimension-edit__label label" for="">Наим. док. на осн. которого выполнена поверка</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__2">
+            <input class="dimension-edit__input input" type="text" placeholder="Периодичность поверки">
+            <label class="dimension-edit__label label" for="">Периодичность поверки</label>
+          </div>
+
+          <div class="dimension-edit__group input-group grid-column__4">
+            <textarea class="dimension-edit__textarea dimension-edit__input input" placeholder="Основание"
+              name="Основание"></textarea>
+            <label class="dimension-edit__label label" for="">Основание</label>
+          </div>
+
+          <p class="added-dimension__footer-text grid-column__4">
+            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M10 6V11M10 14H10.01M19 10C19 14.9706 14.9706 19 10 19C5.02944 19 1 14.9706 1 10C1 5.02944 5.02944 1 10 1C14.9706 1 19 5.02944 19 10Z"
+                stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+
+            Все поля являются обязательными при заполнении, если отсутствует какое-либо значение, необходимо поставить
+            прочерк “-”
+          </p>
+
+          <button type="button" class="dimension-edit__save edit-post__save btn-disable grid-column__4">Добавить
+            средство
+            измерения</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- модальное окно для фото -->
+
+  <div class="graph-modal__container graph-modal__container--picture" role="dialog" aria-modal="true"
+    data-graph-target="added-picture">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <div class="added-picture">
+        <img src="./img/IMAGE 2023-03-27 12_37_30.jpg" alt="modal img">
+      </div>
+    </div>
+  </div>
+
+
+  <!-- разметка для страницы  Готовые модальные окна -->
+  <div class="graph-modal__container graph-modal__container--little" role="dialog" aria-modal="true"
+    data-graph-target="delete-dimension">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <form action="#" class="delete-dimension">
+        <h3 class="delete-dimension__title">
+          Удалить запись
+        </h3>
+
+        <p class="delete-dimension__descr">
+          Вы действительно хотите удалить запись?
+        </p>
+
+        <div class="delete-dimension__btns">
+          <button type="submit" class="delete-dimension__btn btn-primary">Нет</button>
+          <button type="submit" class="delete-dimension__btn btn-secondary">Да</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--little" role="dialog" aria-modal="true"
+    data-graph-target="delete-photo">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <form action="#" class="delete-photo">
+        <h3 class="delete-photo__title">
+          Удалить фотографию
+        </h3>
+
+        <p class="delete-photo__descr">
+          Вы действительно хотите удалить фотографию?
+        </p>
+
+        <div class="delete-photo__btns">
+          <button type="submit" class="delete-photo__btn btn-primary">Нет</button>
+          <button type="submit" class="delete-photo__btn btn-secondary">Да</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--text" role="dialog" aria-modal="true"
+    data-graph-target="delete-dimension-successfully">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <h5 class="delete-dimension-successfully__title">
+        Запись успешно удалена
+      </h5>
+    </div>
+  </div>
+
+  <div class="graph-modal__container graph-modal__container--text" role="dialog" aria-modal="true"
+    data-graph-target="delete-photo-successfully">
+    <button class="btn-reset graph-modal__close js-modal-close" aria-label="Закрыть модальное окно"></button>
+    <div class="graph-modal__content">
+      <!-- контент модального окна -->
+      <h5 class="delete-photo-successfully__title">
+        Фотография успешно удалена
+      </h5>
+    </div>
+  </div>
+</div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <p class="footer__copy">
+      © 2023 Группа компаний «Н2О-ТЕХНОЛОГИИ»
+    </p>
+  </div>
+</footer>
+
+</body>
+
+<script src="./js/graph-modal.min.js"></script>
+<script src="./js/jquery-3.6.3.min.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>

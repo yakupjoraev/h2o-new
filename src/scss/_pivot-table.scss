@@ -1,0 +1,511 @@
+.pivot-table {
+  padding-top: em(70);
+
+  @media (max-width: $breakpoint992) {
+    padding-top: em(40);
+  }
+
+  // .pivot-table__inner
+
+  &__inner {}
+
+  // .pivot-table__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: em(30);
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      justify-content: center;
+      row-gap: em(20);
+      margin-bottom: em(20);
+    }
+  }
+
+  // .pivot-table__title
+
+  &__title {}
+
+  // .pivot-table__export
+
+  &__export {
+    display: inline-flex;
+    width: fit-content;
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .pivot-table__export-icon
+
+  &__export-icon {}
+
+  // .pivot-table__export-text
+
+  &__export-text {}
+
+  // .pivot-table__form
+
+  &__form {}
+
+  &__main {
+    position: relative;
+
+    // &::after {
+    //   content: '';
+    //   position: absolute;
+    //   top: 0;
+    //   right: 0;
+    //   height: calc(100% - 90px);
+    //   width: rem(58);
+    //   background: linear-gradient(270deg, rgba(50, 136, 180, 0.19) 0%, rgba(50, 136, 180, 0) 100%);
+
+    //   @media (max-width: $breakpoint768) {
+    //     height: calc(100% - 115px);
+    //   }
+    // }
+  }
+
+  // .pivot-table__content
+
+  &__content {
+    position: relative;
+    margin-bottom: em(30);
+    overflow-x: scroll;
+    scrollbar-color: var(--main-color) var(--grey-color-2);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      // width: 4px;
+      height: 7px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--grey-color-2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: var(--main-color);
+    }
+  }
+
+  // .pivot-table__list
+
+  &__list {
+    display: grid;
+    width: max-content;
+    margin-bottom: em(15);
+    border-top: 1px solid var(--grey-color-2);
+    border-left: 1px solid var(--grey-color-2);
+    border-radius: 5px;
+    overflow: hidden;
+  }
+
+  // .pivot-table__item
+
+  &__item {
+    display: flex;
+    // grid-template-columns: em(40) em(100) em(150) em(112) em(144) em(124) em(128) em(68) em(134) em(200) em(128) em(100) em(76) em(86) em(54);
+
+    &:nth-child(odd) {
+      background: rgba(50, 136, 180, 0.1);
+    }
+
+    &:last-child .pivot-table__item-info:last-child {
+      border-radius: 0 0 5px 0;
+    }
+
+    &:last-child .pivot-table__item-info:first-child {
+      border-radius: 0 0 0 5px;
+    }
+  }
+
+  // .pivot-table__item--header
+
+  &__item--header {
+    background: rgba(50, 136, 180, 0.1);
+
+    & .pivot-table__item-info {
+      padding: em(10) 0;
+      font-weight: 600;
+      font-size: rem(12);
+      line-height: rem(16);
+      color: var(--main-color);
+    }
+
+    & .pivot-table__item-info:last-child {
+      border-radius: 0 5px 0 0;
+    }
+  }
+
+  // .pivot-table__item-info
+
+  &__item-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: em(12) em(5);
+    overflow-y: auto;
+    border-right: 1px solid var(--grey-color-2);
+    border-bottom: 1px solid var(--grey-color-2);
+    text-align: center;
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(19);
+    color: var(--text-color);
+
+    scrollbar-color: var(--main-color) var(--grey-color-2);
+    scrollbar-width: thin;
+
+    &::-webkit-scrollbar {
+      // width: 4px;
+      height: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: var(--grey-color-2);
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 5px;
+      background: var(--main-color);
+
+    }
+
+  }
+
+  // .pivot-table__item-info--change
+
+  &__item-info--change {
+    cursor: pointer;
+
+    &:hover {
+      & svg path {
+        stroke: var(--main-color);
+      }
+    }
+  }
+
+  // .pivot-table__item-info--view
+
+  &__item-info--view {
+    cursor: pointer;
+  }
+}
+
+.pivot-table {
+
+  // .pivot-table__form
+
+  &__form {
+    margin-bottom: em(35);
+  }
+}
+
+.table-form {
+  display: grid;
+  gap: 30px;
+
+  @media (max-width: 1200px) {}
+
+  @media (max-width: $breakpoint768) {}
+
+  // .table-form__datepickers
+
+  &__datepickers {
+    display: flex;
+    align-items: center;
+    gap: em(10);
+    margin-right: em(20);
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      margin-right: 0;
+      width: 100%;
+    }
+  }
+
+  // .table-form__datepicker
+
+  &__datepicker {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: em(10);
+
+    @media (max-width: $breakpoint768) {
+      flex-direction: column;
+      align-items: flex-start;
+      width: 100%;
+
+      & .ui-datepicker-trigger {
+        position: absolute;
+        right: 20px;
+        top: 40px;
+      }
+    }
+  }
+
+  &__datepicker-input {
+    width: rem(130);
+    height: rem(44);
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .table-form__datepicker-text
+
+  &__datepicker-text {
+    white-space: nowrap;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(19);
+    color: var(--text-color);
+  }
+
+  // .table-form__btn
+
+  &__btn {
+    width: fit-content;
+    padding: em(12) em(25);
+    font-size: rem(14);
+    line-height: rem(19);
+
+    @media (max-width: $breakpoint768) {
+      width: 100%;
+    }
+  }
+
+  // .table-form__checkbox
+
+  &__checkbox {
+    position: absolute;
+    width: 0;
+    height: 0;
+    opacity: 0;
+    z-index: -100;
+  }
+
+  // .table-form__label
+
+  &__label {
+
+    @media (max-width: 1200px) {
+      flex: 0 1 40%;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+    }
+  }
+
+  // .table-form__label-decor
+
+  &__label-decor {
+    border-radius: 3px;
+    border-width: 3px;
+  }
+
+  // .table-form__label-descr
+
+  &__label-descr {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(19);
+    color: var(--text-color);
+  }
+
+  // .table-form__select
+
+  &__select {
+    flex: 0 1 em(140);
+    margin-left: auto;
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: rem(14);
+    line-height: rem(19);
+    color: var(--text-color);
+
+    @media (max-width: 1200px) {
+      // max-width: 740px;
+    }
+
+    @media (max-width: $breakpoint768) {
+      flex: 0 1 auto;
+      margin-left: 0;
+    }
+
+    & .ui-selectmenu-button {
+      position: relative;
+      width: 100%;
+      padding: 0;
+      border: 0;
+      margin: 0;
+      background-color: transparent;
+      font-family: var(--font-main);
+      font-weight: 600;
+      font-size: rem(14);
+      line-height: rem(19);
+      color: var(--text-color);
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: rem(7);
+        right: 0;
+        width: rem(12);
+        height: rem(12);
+        background-image: url('../img/icons/arrow-next.svg');
+        background-repeat: no-repeat;
+        background-size: contain;
+        transform: rotate(90deg);
+        transition: transform 0.2s linear, top 0.1s linear;
+      }
+
+      &.ui-selectmenu-button-open::after {
+        transform: rotate(270deg);
+        top: 0;
+      }
+    }
+  }
+
+  // .table-form__select-label
+
+  &__select-label {}
+
+  // .table-form__select-select
+
+  &__select-select {}
+}
+
+.table-form {}
+
+.table-form__top {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: 1200px) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(30);
+
+    .table-form__datepickers {
+      grid-column: span 3;
+      gap: rem(30);
+      margin-right: 0;
+    }
+
+    .table-form__datepicker-input {
+      width: rem(200);
+    }
+
+    .table-form__select-group {
+      margin-right: 0;
+    }
+
+    .table-form__num-group {
+      margin-right: 0;
+    }
+  }
+
+  @media (max-width: $breakpoint768) {
+    grid-template-columns: repeat(2, 1fr);
+
+    .table-form__datepickers {
+      grid-column: span 2;
+    }
+
+    .table-form__datepicker-input {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: $breakpoint480) {
+    grid-template-columns: repeat(1, 1fr);
+
+    .table-form__datepickers {
+      grid-column: span 1;
+      gap: 10px;
+    }
+  }
+}
+
+.table-form__bottom {
+  display: flex;
+  justify-content: space-between;
+
+  @media (max-width: $breakpoint480) {
+    flex-direction: column;
+    gap: 20px;
+    width: fit-content;
+  }
+}
+
+.table-form__select-group {
+  flex: 0 1 rem(258);
+  display: flex;
+  align-items: center;
+  height: 44px;
+  padding: 0 em(20) 0 0;
+  margin-right: 30px;
+
+  & .table-form__select {
+    flex: 0 1 100%;
+    height: 100%;
+    padding: 0 em(20);
+  }
+}
+
+.table-form__num-group {
+  flex: 0 1 rem(258);
+  height: 44px;
+  margin-right: 30px;
+
+  & .table-form__input {
+    flex: 0 1 100%;
+    height: 100%;
+    padding: 0 em(20);
+  }
+}
+
+
+// классы info-column с фиксированной шириной минимальный 50px и с каждым итератором на 50px большо
+// info-column__1  --50px
+// info-column__2  --100px
+// info-column__3  --150px
+// info-column__4  --200px
+// info-column__5  --250px
+// info-column__6  --300px
+
+.info-column__1 {
+  width: 50px;
+}
+
+.info-column__2 {
+  width: 100px;
+}
+
+.info-column__3 {
+  width: 150px;
+}
+
+.info-column__4 {
+  width: 200px;
+}
+
+.info-column__5 {
+  width: 250px;
+}
+
+.info-column__6 {
+  width: 300px;
+}

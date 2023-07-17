@@ -1,0 +1,253 @@
+.add-entry {
+  padding-top: em(70);
+
+  @media (max-width: $breakpoint992) {
+    padding-top: em(40);
+  }
+
+  // .add-entry__title
+
+  &__title {
+    margin-bottom: em(36);
+
+    @media (max-width: $breakpoint768) {
+      margin-bottom: em(24);
+      text-align: center;
+    }
+  }
+
+  // .add-entry__form
+
+  &__form {}
+
+  // .add-entry__top
+
+  &__top {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: em(20);
+    margin-bottom: em(25);
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+      margin-bottom: em(20);
+    }
+  }
+
+  // .add-entry__group
+
+  &__group {}
+
+  // .add-entry__input
+
+  &__input {
+
+    &:disabled~.add-entry__edit {
+      display: block;
+    }
+  }
+
+  &__select {
+    width: 100%;
+    outline: 0;
+    border-radius: 10px;
+    background-color: var(--white-color);
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: rem(22);
+    color: var(--text-color);
+    cursor: pointer;
+
+    &:disabled {
+      user-select: none;
+      pointer-events: none;
+      color: var(--grey-color);
+
+      &~label {
+        color: var(--grey-color);
+      }
+    }
+
+    &.js_error {
+      border: 1px solid var(--red-color);
+      color: var(--red-color);
+    }
+  }
+
+  &__select-option {
+    font-family: var(--font-main);
+    font-weight: 600;
+    font-size: rem(16);
+    line-height: rem(22);
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  &__edit {
+    display: none;
+    position: absolute;
+    top: em(30);
+    right: em(20);
+    font-weight: 600;
+    font-size: rem(12);
+    line-height: rem(16);
+    text-align: right;
+    letter-spacing: -0.02em;
+    color: var(--main-color);
+  }
+
+  // .add-entry__group--radio
+
+  &__group--radio {}
+
+  // .add-entry__type
+
+  &__type {}
+
+  // .add-entry__radio-label
+
+  &__radio-label {
+
+    &:not(:last-child) {
+      margin-right: em(15);
+    }
+  }
+
+  // .add-entry__radio
+
+  &__radio {}
+
+  // .add-entry__radio-decor
+
+  &__radio-decor {}
+
+  // .add-entry__radio-descr
+
+  &__radio-descr {}
+
+  // .add-entry__middle
+
+  &__middle {
+    display: grid;
+    gap: em(25);
+    margin-bottom: em(25);
+
+    @media (max-width: $breakpoint768) {
+      gap: em(20);
+      margin-bottom: em(20);
+    }
+  }
+
+  // .add-entry__middle-goups
+
+  &__middle-goups {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: em(20);
+
+    @media (max-width: $breakpoint768) {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+
+  // .add-entry__btns
+
+  &__btns {
+    display: grid;
+    gap: em(30);
+
+    @media (max-width: $breakpoint768) {
+      gap: em(25);
+    }
+
+    &+& {
+      margin-top: em(25);
+    }
+  }
+
+  // .add-entry__btn
+
+  &__btn {
+    // align-items: flex-start;
+
+    svg {
+      margin: auto 0;
+    }
+  }
+
+  &__added {
+    display: flex;
+    gap: em(15);
+  }
+}
+
+.add-entry__added--loading {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  & .add-entry__btn {
+    position: relative;
+    width: 100%;
+  }
+
+  & .add-entry__btn-inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 90%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(50, 136, 180, 0.1) 64.05%, rgba(50, 136, 180, 0) 64.06%, rgba(50, 136, 180, 0) 100%);
+  }
+
+
+
+  & svg {
+    animation: addedLoading 3s infinite linear;
+  }
+}
+
+.add-entry__added--ready {
+
+  & .add-entry__btn {
+    background: rgba(142, 197, 129, 0.2);
+    border: 1px solid var(--green-color);
+    color: var(--green-color);
+  }
+
+  @media (max-width: $breakpoint480) {
+    flex-wrap: wrap;
+
+    & .add-entry__btn {
+      flex: 0 1 100%;
+    }
+
+    & .add-entry__update {
+      flex: 1 1 calc(70% - em(15));
+    }
+
+    & .add-entry__view {
+      flex: 1 0 calc(20% - em(15));
+    }
+  }
+}
+
+.add-entry__added--error {
+
+  & .add-entry__btn {
+    background: rgba(170, 14, 14, 0.2);
+    border: 1px solid var(--red-color);
+    color: var(--red-color);
+  }
+}
+
+@keyframes addedLoading {
+  0% {
+    transform: rotate(0);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
