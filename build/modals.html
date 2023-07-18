@@ -1,4 +1,104 @@
-<div class="graph-modal">
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/graph-modal.min.css">
+  <link rel="stylesheet" href="./css/jquery-ui.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body" style="background: #F8F8F8;">
+  <!-- Header -->
+  <header class="header">
+  <div class="container">
+    <nav class="nav nav-cards">
+      <a class="nav__link" href="#">
+        <img class="nav__link-img" src="./img/logo.svg" alt="logo">
+      </a>
+
+      <a class="nav__link" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z"
+            stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="nav__link-text">Архив заявок</span>
+      </a>
+
+      <a class="nav__link" href="#">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7 14L11 10M11 10L7 6M11 10H1M10 19H14.2C15.8802 19 16.7202 19 17.362 18.673C17.9265 18.3854 18.3854 17.9265 18.673 17.362C19 16.7202 19 15.8802 19 14.2V5.8C19 4.11984 19 3.27976 18.673 2.63803C18.3854 2.07354 17.9265 1.6146 17.362 1.32698C16.7202 1 15.8802 1 14.2 1H10"
+            stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="nav__link-text">Выход</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Main Page -->
+  <main>
+    <div class="container">
+  <div class="modals-list">
+    <ul class="modals-list__list">
+      <li class="modals-list__item open-modal-btn" data-modal-id="modal1">
+        первый
+      </li>
+
+      <li class="modals-list__item" data-graph-path="in-archive">
+        второй
+      </li>
+
+      <li class="modals-list__item">
+        третий
+      </li>
+
+      <li class="modals-list__item">
+        четвертый
+      </li>
+
+
+    </ul>
+  </div>
+</div>
+
+<style>
+  .modals-list__list {
+    display: grid;
+    gap: 20px;
+    padding: 50px 0;
+  }
+
+  .modals-list__item {
+    display: grid;
+  }
+
+  .modals-list__item {
+    padding: 20px;
+    background-color: var(--main-color);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  .modals-list__item:hover {
+    color: var(--white-color);
+  }
+</style>
+    <div class="graph-modal">
 
 
 
@@ -320,3 +420,22 @@
   </div>
 
 </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <p class="footer__copy">
+      © 2023 Группа компаний «Н2О-ТЕХНОЛОГИИ»
+    </p>
+  </div>
+</footer>
+
+</body>
+
+<script src="./js/graph-modal.min.js"></script>
+<script src="./js/jquery-3.6.3.min.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>

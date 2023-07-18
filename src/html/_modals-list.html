@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="modals-list">
+    <ul class="modals-list__list">
+      <li class="modals-list__item open-modal-btn" data-modal-id="modal1">
+        первый
+      </li>
+
+      <li class="modals-list__item" data-graph-path="in-archive">
+        второй
+      </li>
+
+      <li class="modals-list__item">
+        третий
+      </li>
+
+      <li class="modals-list__item">
+        четвертый
+      </li>
+
+
+    </ul>
+  </div>
+</div>
+
+<style>
+  .modals-list__list {
+    display: grid;
+    gap: 20px;
+    padding: 50px 0;
+  }
+
+  .modals-list__item {
+    display: grid;
+  }
+
+  .modals-list__item {
+    padding: 20px;
+    background-color: var(--main-color);
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 120%;
+    color: var(--text-color);
+    cursor: pointer;
+  }
+
+  .modals-list__item:hover {
+    color: var(--white-color);
+  }
+</style>

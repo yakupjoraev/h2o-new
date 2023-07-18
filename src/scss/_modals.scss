@@ -1,11 +1,12 @@
 // стили для первой модалки
 
 .graph-modal {
+  text-align: right;
 
   // .graph-modal__container
 
   &__container {
-    width: rem(890);
+    width: rem(968);
     padding: 0;
 
     @media (max-width: $breakpoint992) {
@@ -21,17 +22,28 @@
 
   &__close {
     top: 34px;
-    right: 34px;
-    width: 16px;
-    height: 16px;
-    background-image: url('../img/icons/close-modal.svg');
-    background-repeat: no-repeat;
-    background-size: contain;
+    left: -146px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 10px;
+    width: 146px;
+    height: 46px;
+    border-radius: 23px 0px 0px 23px;
+    background-image: none;
+    background-color: var(--blue, #3288B4);
     outline: 0;
 
-    @media (max-width: $breakpoint768) {
-      top: 10px;
-      right: 10px;
+    font-family: var(--font-main);
+    font-weight: 600;
+    line-height: normal;
+    font-size: 16px;
+    color: var(--white-color);
+
+    @media (max-width: 1200px) {
+      top: 0;
+      left: 0;
+      border-radius: 0px 23px 0px 23px;
     }
   }
 
@@ -45,7 +57,7 @@
 .js-modal-close {}
 
 .edit-post {
-  max-width: rem(890);
+  max-width: rem(968);
   padding: rem(55);
   margin: 0 auto;
 
@@ -302,16 +314,16 @@
     display: flex;
     justify-content: center;
     font-weight: 600;
-    z-index: rem(16);
+    column-gap: rem(16);
     line-height: rem(22);
-    color: var(--grey-color);
+    color: var(--main-color);
   }
 }
 
 // стили для второй модалки
 
 .dimension-edit {
-  max-width: rem(890);
+  max-width: rem(968);
   padding: rem(55);
   margin: 0 auto;
 
@@ -338,130 +350,9 @@
     gap: rem(25) rem(20);
   }
 
-  // .dimension-edit__group
-
-  // &__group {
-  //   position: relative;
-
-  //   &:nth-child(1) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(2) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(3) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(4) {
-  //     grid-column: span 1;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(5) {
-  //     grid-column: span 1;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(6) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(7) {
-  //     grid-column: span 1;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(8) {
-  //     grid-column: span 1;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(9) {
-  //     grid-column: span 4;
-  //   }
-
-  //   &:nth-child(10) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(11) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(12) {
-  //     grid-column: span 4;
-  //   }
-
-  //   &:nth-child(13) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-
-  //     @media (max-width: 370px) {
-  //       & .dimension-edit__label {
-  //         // left: 0;
-  //         font-size: rem(10);
-  //       }
-  //     }
-  //   }
-
-  //   &:nth-child(14) {
-  //     grid-column: span 2;
-
-  //     @media (max-width: $breakpoint768) {
-  //       grid-column: span 4;
-  //     }
-  //   }
-
-  //   &:nth-child(15) {
-  //     grid-column: span 4;
-  //   }
-  // }
-
   &__textarea {
     display: inline-block;
-    height: fit-content;
+    height: 135px;
     font-family: var(--font-main);
     font-weight: 600;
     font-size: rem(16);
@@ -540,11 +431,16 @@
 // другие модалки
 
 .graph-modal__container--little {
+
   width: rem(520);
 
   & .graph-modal__close {
-    top: rem(10);
-    right: rem(10);
+    width: 24px;
+    height: 24px;
+    background-color: transparent;
+    top: rem(-20);
+    right: rem(-30);
+    left: auto;
   }
 }
 
@@ -813,4 +709,102 @@
     max-height: 80vh;
     object-fit: cover;
   }
+}
+
+
+
+
+
+
+
+
+
+
+
+.dimension-edit__header {
+  display: flex;
+  // align-items: flex-end;
+  column-gap: rem(20);
+  margin-bottom: rem(44);
+}
+
+.dimension-edit__title {
+  margin-bottom: 0;
+  font-family: var(--font-main);
+  font-size: rem(30);
+  font-weight: 500;
+  line-height: normal;
+  color: var(--main-color);
+}
+
+.dimension-edit__data {
+  align-self: flex-end;
+  margin-bottom: rem(5);
+  font-weight: 500;
+  line-height: normal;
+  font-size: rem(14);
+  color: var(--grey-color);
+}
+
+.dimension-edit__edit-post {
+  display: flex;
+  align-items: center;
+  column-gap: rem(5);
+  margin-left: auto;
+  font-size: rem(16);
+  font-weight: 600;
+  line-height: normal;
+  color: var(--grey-color);
+
+  cursor: pointer;
+}
+
+
+
+
+
+
+.dimension-edit__footer-btns {
+  display: flex;
+  align-items: center;
+  column-gap: rem(20);
+}
+
+.dimension-edit__done-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(10);
+  margin-right: rem(20);
+  white-space: nowrap;
+}
+
+.dimension-edit {
+
+  .add-entry__group {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .add-entry__type {
+    flex: 0 1 100%;
+  }
+}
+
+.comment-block {
+  padding: 30px;
+  border-radius: 10px;
+  background: #E8F2F5;
+
+  textarea {
+    height: 120px;
+  }
+}
+
+.comment-block__title {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--main-color);
 }

@@ -117,6 +117,36 @@ $(function () {
   });
 
 
+  $("#datepicker-12").datepicker({
+    changeMonth: false,
+    changeYear: true,
+    showOn: "button",
+    buttonImage: "./img/icons/datepicker.svg",
+    // buttonImageOnly: true,
+    buttonText: "Выбрать дату",
+  });
+
+
+  $("#datepicker-13").datepicker({
+    changeMonth: false,
+    changeYear: true,
+    showOn: "button",
+    buttonImage: "./img/icons/datepicker.svg",
+    // buttonImageOnly: true,
+    buttonText: "Выбрать дату",
+  });
+
+
+  $("#datepicker-14").datepicker({
+    changeMonth: false,
+    changeYear: true,
+    showOn: "button",
+    buttonImage: "./img/icons/datepicker.svg",
+    // buttonImageOnly: true,
+    buttonText: "Выбрать дату",
+  });
+
+
   /* Локализация datepicker */
   $.datepicker.regional['ru'] = {
     closeText: 'Закрыть',
