@@ -2627,6 +2627,10 @@ a.ui-button:active,
   background-color: transparent;
 }
 
+.cards {
+  padding: 30px 0;
+}
+
 .cards__header {
   padding: 13px 36px;
   margin-bottom: 30px;
@@ -2893,6 +2897,96 @@ a.ui-button:active,
 
 .done .cards__item-header-circkle {
   background-color: #BF56FF;
+}
+
+.cards .ui-datepicker-trigger {
+  position: absolute;
+  right: 0.75rem;
+}
+
+.cards .table-form__top {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.cards .table-form__select-group {
+  margin-right: 0;
+}
+
+.cards .table-form__select-group {
+  min-width: 12.5rem;
+}
+
+.cards .table-form__bottom {
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+}
+
+.cards .dimension-guide__header {
+  margin-bottom: 0;
+  width: 100%;
+}
+
+.cards .dimension-guide__search {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 100%;
+          flex: 0 1 100%;
+}
+
+.cards .table-form__btn {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 17.75rem;
+          flex: 0 1 17.75rem;
+  width: 100%;
+}
+
+.cards .pivot-table__form {
+  margin-bottom: 0;
+}
+
+.cards .table-form {
+  gap: 0.9375rem;
+}
+
+.cards .cards-select-group {
+  position: relative;
+}
+
+.cards .cards-select-group::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 9px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  background-image: url("../img/select-arrow.svg");
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+}
+
+.cards .cards-select-group-clock::before {
+  background-image: url("../img/select-time.svg");
+}
+
+.unsuccessful .cards__item-border {
+  background-color: #000AFF;
+}
+
+.unsuccessful .cards__item-header-circkle {
+  background-color: #000AFF;
+}
+
+.archive__middle {
+  margin-bottom: 30px;
 }
 
 @media (max-width: 1200px) {

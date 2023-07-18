@@ -1,55 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Index</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@600&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="./css/graph-modal.min.css">
-  <link rel="stylesheet" href="./css/jquery-ui.min.css">
-  <link rel="stylesheet" href="./css/style.min.css">
-</head>
-
-<body class="main__body" style="background: #F8F8F8;">
-  <!-- Header -->
-  <header class="header">
-  <div class="container">
-    <nav class="nav nav-cards">
-      <a class="nav__link" href="#">
-        <img class="nav__link-img" src="./img/logo.svg" alt="logo">
-      </a>
-
-      <a class="nav__link" href="#">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
-          <path
-            d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z"
-            stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-
-        <span class="nav__link-text">Архив заявок</span>
-      </a>
-
-      <a class="nav__link" href="#">
-        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path
-            d="M7 14L11 10M11 10L7 6M11 10H1M10 19H14.2C15.8802 19 16.7202 19 17.362 18.673C17.9265 18.3854 18.3854 17.9265 18.673 17.362C19 16.7202 19 15.8802 19 14.2V5.8C19 4.11984 19 3.27976 18.673 2.63803C18.3854 2.07354 17.9265 1.6146 17.362 1.32698C16.7202 1 15.8802 1 14.2 1H10"
-            stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-        </svg>
-
-        <span class="nav__link-text">Выход</span>
-      </a>
-    </nav>
-  </div>
-</header>
-
-  <!-- Main Page -->
-  <main>
-    <section class="cards">
+<section class="cards archive">
   <div class="container">
     <div class="cards__inner">
       <div class="cards__header">
@@ -140,14 +89,18 @@
         </form>
       </div>
 
+      <div class="archive__middle">
+        <h1 class="archive__title main-title ">Архив выполненных заявок</h1>
+      </div>
+
       <div class="cards__main">
-        <ul class="cards__list expectation">
+        <ul class="cards__list unsuccessful">
           <li class="cards__item-header">
             <div class="cards__item-border"> </div>
 
             <h3 class="cards__item-header-title">
               <span class="cards__item-header-circkle"></span>
-              Ожидание
+              Неудачные лиды
             </h3>
           </li>
 
@@ -286,204 +239,6 @@
           </li>
         </ul>
 
-        <ul class="cards__list expectation-payment">
-          <li class="cards__item-header">
-            <div class="cards__item-border"> </div>
-
-            <h3 class="cards__item-header-title">
-              <span class="cards__item-header-circkle"></span>
-              Ожидание оплаты
-            </h3>
-          </li>
-
-          <li class="cards__item">
-            <div class="cards__item-border"> </div>
-            <div class="cards__item-top">
-              <div class="cards__item-data">
-                <span>2023-04-30</span>
-                <span> / </span>
-                <span>9:05</span>
-
-                <div class="cards__item-sent">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
-                    <path d="M1.66663 5.75463L3.71791 7.79167L8.33329 3.20834" stroke="#00C744" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-
-                  Отправлено
-                </div>
-              </div>
-
-              <h4 class="cards__item-name">
-                Иванов Александр Александрович
-              </h4>
-            </div>
-
-            <div class="cards__item-bottom">
-              <a class="cards__item-phone" href="tel:89607895654">
-                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11.375 3.47917C11.375 8.11606 7.61606 11.875 2.97917 11.875C2.76996 11.875 2.56255 11.8673 2.35718 11.8523C2.1215 11.8351 2.00366 11.8264 1.89639 11.7647C1.80755 11.7135 1.72329 11.6229 1.67876 11.5305C1.625 11.419 1.625 11.289 1.625 11.0289V9.50287C1.625 9.28417 1.625 9.17481 1.66099 9.08107C1.69279 8.99827 1.74443 8.92454 1.81139 8.86636C1.88718 8.80049 1.98995 8.76312 2.19549 8.68838L3.93252 8.05673C4.17166 7.96978 4.29123 7.9263 4.40467 7.93368C4.5047 7.94019 4.60096 7.97432 4.68274 8.03229C4.77549 8.09803 4.84095 8.20713 4.97186 8.42533L5.41667 9.16667C6.85201 8.51661 8.01564 7.35147 8.66667 5.91667L7.92532 5.47186C7.70713 5.34095 7.59803 5.27549 7.53229 5.18274C7.47432 5.10096 7.44019 5.0047 7.43368 4.90467C7.4263 4.79123 7.46977 4.67166 7.55673 4.43254L7.55673 4.43252L8.18838 2.69549C8.26312 2.48995 8.30049 2.38718 8.36636 2.31139C8.42454 2.24443 8.49827 2.19279 8.58107 2.16099C8.67481 2.125 8.78417 2.125 9.00287 2.125H10.5289C10.789 2.125 10.919 2.125 11.0305 2.17876C11.1229 2.22329 11.2135 2.30755 11.2647 2.39639C11.3264 2.50366 11.3351 2.6215 11.3523 2.85718C11.3673 3.06255 11.375 3.26996 11.375 3.47917Z"
-                    stroke="#3288B4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-
-                8 960 789 56 54
-              </a>
-
-              <p class="cards__item-address">
-                <span>105082, г. Москва,</span>
-                <span>ул. Бакунинская, д. 92, стр. 2</span>
-              </p>
-            </div>
-          </li>
-
-          <li class="cards__item">
-            <div class="cards__item-border"> </div>
-            <div class="cards__item-top">
-              <div class="cards__item-data">
-                <span>2023-04-30</span>
-                <span> / </span>
-                <span>9:05</span>
-
-                <div class="cards__item-not-sent">
-                  <svg width="10" height="11" viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2.5 3L7.5 8M7.5 3L2.5 8" stroke="#9E0000" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-
-
-                  Не отправлено
-                </div>
-              </div>
-
-              <h4 class="cards__item-name">
-                Иванов Александр Александрович
-              </h4>
-            </div>
-
-            <div class="cards__item-bottom">
-              <a class="cards__item-phone" href="tel:89607895654">
-                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11.375 3.47917C11.375 8.11606 7.61606 11.875 2.97917 11.875C2.76996 11.875 2.56255 11.8673 2.35718 11.8523C2.1215 11.8351 2.00366 11.8264 1.89639 11.7647C1.80755 11.7135 1.72329 11.6229 1.67876 11.5305C1.625 11.419 1.625 11.289 1.625 11.0289V9.50287C1.625 9.28417 1.625 9.17481 1.66099 9.08107C1.69279 8.99827 1.74443 8.92454 1.81139 8.86636C1.88718 8.80049 1.98995 8.76312 2.19549 8.68838L3.93252 8.05673C4.17166 7.96978 4.29123 7.9263 4.40467 7.93368C4.5047 7.94019 4.60096 7.97432 4.68274 8.03229C4.77549 8.09803 4.84095 8.20713 4.97186 8.42533L5.41667 9.16667C6.85201 8.51661 8.01564 7.35147 8.66667 5.91667L7.92532 5.47186C7.70713 5.34095 7.59803 5.27549 7.53229 5.18274C7.47432 5.10096 7.44019 5.0047 7.43368 4.90467C7.4263 4.79123 7.46977 4.67166 7.55673 4.43254L7.55673 4.43252L8.18838 2.69549C8.26312 2.48995 8.30049 2.38718 8.36636 2.31139C8.42454 2.24443 8.49827 2.19279 8.58107 2.16099C8.67481 2.125 8.78417 2.125 9.00287 2.125H10.5289C10.789 2.125 10.919 2.125 11.0305 2.17876C11.1229 2.22329 11.2135 2.30755 11.2647 2.39639C11.3264 2.50366 11.3351 2.6215 11.3523 2.85718C11.3673 3.06255 11.375 3.26996 11.375 3.47917Z"
-                    stroke="#3288B4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-
-                8 960 789 56 54
-              </a>
-
-              <p class="cards__item-address">
-                <span>105082, г. Москва,</span>
-                <span> Малый Гнездниковский</span>
-                <span> переулок, д. 92, стр. 2</span>
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-        <ul class="cards__list paid">
-          <li class="cards__item-header">
-            <div class="cards__item-border"> </div>
-
-            <h3 class="cards__item-header-title">
-              <span class="cards__item-header-circkle"></span>
-
-              Оплачено
-            </h3>
-          </li>
-
-          <li class="cards__item">
-            <div class="cards__item-border"> </div>
-            <div class="cards__item-top">
-              <div class="cards__item-data">
-                <span>2023-04-30</span>
-                <span> / </span>
-                <span>9:05</span>
-
-                <div class="cards__item-sent">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="10" height="11" viewBox="0 0 10 11" fill="none">
-                    <path d="M1.66663 5.75463L3.71791 7.79167L8.33329 3.20834" stroke="#00C744" stroke-linecap="round"
-                      stroke-linejoin="round" />
-                  </svg>
-
-                  Отправлено
-                </div>
-              </div>
-
-              <h4 class="cards__item-name">
-                Иванов Иван Иванович
-              </h4>
-            </div>
-
-            <div class="cards__item-bottom">
-              <a class="cards__item-phone" href="tel:89607895654">
-                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11.375 3.47917C11.375 8.11606 7.61606 11.875 2.97917 11.875C2.76996 11.875 2.56255 11.8673 2.35718 11.8523C2.1215 11.8351 2.00366 11.8264 1.89639 11.7647C1.80755 11.7135 1.72329 11.6229 1.67876 11.5305C1.625 11.419 1.625 11.289 1.625 11.0289V9.50287C1.625 9.28417 1.625 9.17481 1.66099 9.08107C1.69279 8.99827 1.74443 8.92454 1.81139 8.86636C1.88718 8.80049 1.98995 8.76312 2.19549 8.68838L3.93252 8.05673C4.17166 7.96978 4.29123 7.9263 4.40467 7.93368C4.5047 7.94019 4.60096 7.97432 4.68274 8.03229C4.77549 8.09803 4.84095 8.20713 4.97186 8.42533L5.41667 9.16667C6.85201 8.51661 8.01564 7.35147 8.66667 5.91667L7.92532 5.47186C7.70713 5.34095 7.59803 5.27549 7.53229 5.18274C7.47432 5.10096 7.44019 5.0047 7.43368 4.90467C7.4263 4.79123 7.46977 4.67166 7.55673 4.43254L7.55673 4.43252L8.18838 2.69549C8.26312 2.48995 8.30049 2.38718 8.36636 2.31139C8.42454 2.24443 8.49827 2.19279 8.58107 2.16099C8.67481 2.125 8.78417 2.125 9.00287 2.125H10.5289C10.789 2.125 10.919 2.125 11.0305 2.17876C11.1229 2.22329 11.2135 2.30755 11.2647 2.39639C11.3264 2.50366 11.3351 2.6215 11.3523 2.85718C11.3673 3.06255 11.375 3.26996 11.375 3.47917Z"
-                    stroke="#3288B4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-
-                8 960 789 56 54
-              </a>
-
-              <p class="cards__item-address">
-                <span>105082, г. Москва,</span>
-                <span>ул. Бакунинская, д. 92, стр. 2</span>
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
-        <ul class="cards__list in-work">
-          <li class="cards__item-header">
-            <div class="cards__item-border"> </div>
-
-            <h3 class="cards__item-header-title">
-              <span class="cards__item-header-circkle"></span>
-              В работе
-            </h3>
-          </li>
-
-          <li class="cards__item">
-            <div class="cards__item-border"> </div>
-            <div class="cards__item-top">
-              <div class="cards__item-data">
-                <span>2023-04-30</span>
-                <span> / </span>
-                <span>9:05</span>
-              </div>
-
-              <h4 class="cards__item-name">
-                Иванов Иван Иванович
-              </h4>
-            </div>
-
-            <div class="cards__item-bottom">
-              <a class="cards__item-phone" href="tel:89607895654">
-                <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    d="M11.375 3.47917C11.375 8.11606 7.61606 11.875 2.97917 11.875C2.76996 11.875 2.56255 11.8673 2.35718 11.8523C2.1215 11.8351 2.00366 11.8264 1.89639 11.7647C1.80755 11.7135 1.72329 11.6229 1.67876 11.5305C1.625 11.419 1.625 11.289 1.625 11.0289V9.50287C1.625 9.28417 1.625 9.17481 1.66099 9.08107C1.69279 8.99827 1.74443 8.92454 1.81139 8.86636C1.88718 8.80049 1.98995 8.76312 2.19549 8.68838L3.93252 8.05673C4.17166 7.96978 4.29123 7.9263 4.40467 7.93368C4.5047 7.94019 4.60096 7.97432 4.68274 8.03229C4.77549 8.09803 4.84095 8.20713 4.97186 8.42533L5.41667 9.16667C6.85201 8.51661 8.01564 7.35147 8.66667 5.91667L7.92532 5.47186C7.70713 5.34095 7.59803 5.27549 7.53229 5.18274C7.47432 5.10096 7.44019 5.0047 7.43368 4.90467C7.4263 4.79123 7.46977 4.67166 7.55673 4.43254L7.55673 4.43252L8.18838 2.69549C8.26312 2.48995 8.30049 2.38718 8.36636 2.31139C8.42454 2.24443 8.49827 2.19279 8.58107 2.16099C8.67481 2.125 8.78417 2.125 9.00287 2.125H10.5289C10.789 2.125 10.919 2.125 11.0305 2.17876C11.1229 2.22329 11.2135 2.30755 11.2647 2.39639C11.3264 2.50366 11.3351 2.6215 11.3523 2.85718C11.3673 3.06255 11.375 3.26996 11.375 3.47917Z"
-                    stroke="#3288B4" stroke-linecap="round" stroke-linejoin="round" />
-                </svg>
-
-
-                8 960 789 56 54
-              </a>
-
-              <p class="cards__item-address">
-                <span>105082, г. Москва,</span>
-                <span>ул. Бакунинская, д. 92, стр. 2</span>
-              </p>
-            </div>
-          </li>
-
-        </ul>
-
         <ul class="cards__list done">
           <li class="cards__item-header">
             <div class="cards__item-border"> </div>
@@ -532,22 +287,3 @@
     </div>
   </div>
 </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-  <div class="container">
-    <p class="footer__copy">
-      © 2023 Группа компаний «Н2О-ТЕХНОЛОГИИ»
-    </p>
-  </div>
-</footer>
-
-</body>
-
-<script src="./js/graph-modal.min.js"></script>
-<script src="./js/jquery-3.6.3.min.js"></script>
-<script src="./js/jquery-ui.js"></script>
-<script src="./js/scripts.min.js"></script>
-
-</html>

@@ -1,4 +1,5 @@
 .cards {
+  padding: 30px 0;
 
   // .cards__inner
 
@@ -269,5 +270,80 @@
 
   .cards__item-header-circkle {
     background-color: #BF56FF;
+  }
+}
+
+.cards {
+  .ui-datepicker-trigger {
+    position: absolute;
+    right: rem(12);
+  }
+
+  .table-form__top {
+    align-items: center;
+  }
+
+  .table-form__select-group {
+    margin-right: 0;
+  }
+
+  .table-form__select-group {
+    min-width: rem(200);
+  }
+
+  .table-form__bottom {
+    column-gap: 20px;
+  }
+
+  .dimension-guide__header {
+    margin-bottom: 0;
+    width: 100%;
+  }
+
+  .dimension-guide__search {
+    flex: 0 1 100%;
+  }
+
+  .table-form__btn {
+    flex: 0 1 rem(284);
+    width: 100%;
+  }
+
+  .pivot-table__form {
+    margin-bottom: 0;
+  }
+
+  .table-form {
+    gap: rem(15);
+  }
+
+
+  .table-form__select-group {}
+
+  .cards-select-group {
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      right: 20px;
+      top: 9px;
+      width: 24px;
+      height: 24px;
+      background-color: #fff;
+      background-image: url('../img/select-arrow.svg');
+      background-repeat: no-repeat;
+      overflow: hidden;
+      z-index: 2;
+
+      user-select: none;
+      pointer-events: none;
+    }
+  }
+
+  .cards-select-group-clock {
+    &::before {
+      background-image: url('../img/select-time.svg');
+    }
   }
 }
