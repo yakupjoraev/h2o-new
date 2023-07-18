@@ -1,6 +1,35 @@
 // Custom Scripts
 // Custom scripts
 
+function filtersArchive() {
+  const container = document.querySelector('.archive')
+
+  if (!container) {
+    return null
+  }
+
+  const filtersResult = document.querySelector('[data-filters-result]');
+  const filtersBtn1 = document.querySelector('[data-filters-btn-1]');
+  const filtersBtn2 = document.querySelector('[data-filters-btn-2]');
+
+  filtersBtn1.addEventListener('click', () => {
+    filtersResult.classList.remove('view-list');
+    filtersResult.classList.add('view-cards');
+
+    filtersBtn2.classList.remove('view-list');
+    filtersBtn1.classList.add('view-cards');
+  })
+
+  filtersBtn2.addEventListener('click', () => {
+    filtersResult.classList.remove('view-cards');
+    filtersResult.classList.add('view-list');
+
+    filtersBtn1.classList.remove('view-cards');
+    filtersBtn2.classList.add('view-list');
+  })
+}
+
+filtersArchive();
 
 // селект для сводной таблицы
 
