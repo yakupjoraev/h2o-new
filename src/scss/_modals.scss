@@ -1,26 +1,63 @@
 // стили для первой модалки
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  opacity: 1;
+}
+
+.modal-center.show {
+  justify-content: center;
+  align-items: center;
+
+  .graph-modal__content {
+    border-radius: 10px;
+  }
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  opacity: 0;
+  transform: translateY(-50px);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.modal.show .modal-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.graph-modal__container {
+  position: relative;
+}
 
 .graph-modal {
   text-align: right;
 
-  // .graph-modal__container
-
-  &__container {
-    width: rem(968);
-    padding: 0;
-
-    @media (max-width: $breakpoint992) {
-      width: 90%;
-    }
-
-    @media (max-width: $breakpoint480) {
-      width: 97%;
-    }
-  }
-
   // .graph-modal__close
 
   &__close {
+    position: absolute;
     top: 34px;
     left: -146px;
     display: flex;
@@ -49,7 +86,10 @@
 
   // .graph-modal__content
 
-  &__content {}
+  &__content {
+    background-color: #fff;
+    border-radius: 20px 0px 0px 20px;
+  }
 }
 
 .btn-reset {}
@@ -777,6 +817,7 @@
   column-gap: rem(10);
   margin-right: rem(20);
   white-space: nowrap;
+  color: var(--grey-color);
 }
 
 .dimension-edit {
@@ -792,12 +833,18 @@
 }
 
 .comment-block {
+  position: relative;
   padding: 30px;
   border-radius: 10px;
   background: #E8F2F5;
 
   textarea {
     height: 120px;
+  }
+
+  .dimension-edit__copy-btn {
+    top: 60%;
+    right: 40px;
   }
 }
 
@@ -808,3 +855,101 @@
   line-height: normal;
   color: var(--main-color);
 }
+
+
+.dimension-edit__arrows {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.dimension-edit__arrow-up {
+  cursor: pointer;
+}
+
+.dimension-edit__arrow-down {
+  cursor: pointer;
+}
+
+.dimension-edit__input {
+  padding-right: 44px !important;
+}
+
+
+.dimension-edit__copy-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+.dimension-edit__copy-btn--left,
+.ui-datepicker-trigger--left {
+  right: 60px !important;
+}
+
+.dimension-edit__copy-btn--left-30 {
+  right: 30px;
+}
+
+.dimension-edit--edit {
+
+  .dimension-edit__copy-btn {
+    display: none;
+  }
+
+  .ui-datepicker-trigger--left {
+    right: 20px !important;
+  }
+
+  .dimension-edit__edit-post {
+    color: var(--main-color);
+  }
+}
+
+.dimension-edit__alert {
+  position: fixed;
+  left: 20px;
+  bottom: 140px;
+  display: inline-flex;
+  max-width: 308px;
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--white-color, #FFF);
+  font-weight: 600;
+  line-height: normal;
+  font-size: 16px;
+  color: var(--main-color);
+
+  @media (max-width: $breakpoint1450) {
+    display: none;
+  }
+}
+
+.input:disabled~.dimension-edit__copy-btn {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.input:disabled~.ui-datepicker-trigger img {
+  filter: grayscale(1);
+}
+
+.input:disabled~.dimension-edit__input-added .dimension-edit__copy-btn {
+  opacity: 0.5;
+
+  &:hover {
+    opacity: 1;
+  }
+}
+
+.dimension-edit--disabled {}

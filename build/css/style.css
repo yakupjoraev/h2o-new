@@ -301,16 +301,84 @@ main {
   background: rgba(50, 136, 180, 0.05);
 }
 
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal.show {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  opacity: 1;
+}
+
+.modal-center.show {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.modal-center.show .graph-modal__content {
+  border-radius: 10px;
+}
+
+.modal-content {
+  background-color: white;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  position: relative;
+  opacity: 0;
+  -webkit-transform: translateY(-50px);
+      -ms-transform: translateY(-50px);
+          transform: translateY(-50px);
+  -webkit-transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
+}
+
+.modal.show .modal-content {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.graph-modal__container {
+  position: relative;
+}
+
 .graph-modal {
   text-align: right;
 }
 
-.graph-modal__container {
-  width: 60.5rem;
-  padding: 0;
-}
-
 .graph-modal__close {
+  position: absolute;
   top: 34px;
   left: -146px;
   display: -webkit-box;
@@ -336,6 +404,11 @@ main {
   line-height: normal;
   font-size: 16px;
   color: var(--white-color);
+}
+
+.graph-modal__content {
+  background-color: #fff;
+  border-radius: 20px 0px 0px 20px;
 }
 
 .edit-post {
@@ -961,6 +1034,7 @@ main {
           column-gap: 0.625rem;
   margin-right: 1.25rem;
   white-space: nowrap;
+  color: var(--grey-color);
 }
 
 .dimension-edit .add-entry__group {
@@ -978,6 +1052,7 @@ main {
 }
 
 .comment-block {
+  position: relative;
   padding: 30px;
   border-radius: 10px;
   background: #E8F2F5;
@@ -987,12 +1062,119 @@ main {
   height: 120px;
 }
 
+.comment-block .dimension-edit__copy-btn {
+  top: 60%;
+  right: 40px;
+}
+
 .comment-block__title {
   margin-bottom: 16px;
   font-size: 20px;
   font-weight: 500;
   line-height: normal;
   color: var(--main-color);
+}
+
+.dimension-edit__arrows {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.dimension-edit__arrow-up {
+  cursor: pointer;
+}
+
+.dimension-edit__arrow-down {
+  cursor: pointer;
+}
+
+.dimension-edit__input {
+  padding-right: 44px !important;
+}
+
+.dimension-edit__copy-btn {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.dimension-edit__copy-btn--left,
+.ui-datepicker-trigger--left {
+  right: 60px !important;
+}
+
+.dimension-edit__copy-btn--left-30 {
+  right: 30px;
+}
+
+.dimension-edit--edit .dimension-edit__copy-btn {
+  display: none;
+}
+
+.dimension-edit--edit .ui-datepicker-trigger--left {
+  right: 20px !important;
+}
+
+.dimension-edit--edit .dimension-edit__edit-post {
+  color: var(--main-color);
+}
+
+.dimension-edit__alert {
+  position: fixed;
+  left: 20px;
+  bottom: 140px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  max-width: 308px;
+  padding: 30px;
+  border-radius: 10px;
+  background: var(--white-color, #FFF);
+  font-weight: 600;
+  line-height: normal;
+  font-size: 16px;
+  color: var(--main-color);
+}
+
+.input:disabled ~ .dimension-edit__copy-btn {
+  opacity: 0.5;
+}
+
+.input:disabled ~ .dimension-edit__copy-btn:hover {
+  opacity: 1;
+}
+
+.input:disabled ~ .ui-datepicker-trigger img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
+.input:disabled ~ .dimension-edit__input-added .dimension-edit__copy-btn {
+  opacity: 0.5;
+}
+
+.input:disabled ~ .dimension-edit__input-added .dimension-edit__copy-btn:hover {
+  opacity: 1;
 }
 
 .ui-widget.ui-widget-content {
@@ -1333,7 +1515,7 @@ a.ui-button:active,
   background-color: var(--white-color);
   border: 1px solid #ddd;
   border-radius: 10px;
-  z-index: 3;
+  z-index: 1;
 }
 
 .input-group__item {
@@ -2426,6 +2608,10 @@ a.ui-button:active,
   top: 0;
 }
 
+.table-form__datepicker-input {
+  font-size: 14px;
+}
+
 .table-form__top {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -3110,6 +3296,10 @@ a.ui-button:active,
   background-image: url("../img/select-time.svg");
 }
 
+.table-form__select {
+  color: var(--grey-color);
+}
+
 .unsuccessful .cards__item-border {
   background-color: #000AFF;
 }
@@ -3238,6 +3428,12 @@ a.ui-button:active,
   font-size: 0.6875rem;
 }
 
+@media (max-width: 1449.98px) {
+  .dimension-edit__alert {
+    display: none;
+  }
+}
+
 @media (max-width: 1200px) {
   .graph-modal__close {
     top: 0;
@@ -3295,10 +3491,6 @@ a.ui-button:active,
 }
 
 @media (max-width: 991.98px) {
-  .graph-modal__container {
-    width: 90%;
-  }
-
   .edit-post {
     padding: 2.5rem;
   }
@@ -3579,10 +3771,6 @@ a.ui-button:active,
 }
 
 @media (max-width: 479.98px) {
-  .graph-modal__container {
-    width: 97%;
-  }
-
   .delete-dimension__btn {
     width: 7.5rem;
   }
