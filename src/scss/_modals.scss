@@ -888,6 +888,10 @@
   transform: translateY(-50%);
 }
 
+.edit-post__datepicker--left .ui-datepicker-trigger {
+  right: 60px !important;
+}
+
 
 .dimension-edit__copy-btn--left,
 .ui-datepicker-trigger--left {
@@ -950,6 +954,11 @@
   &:hover {
     opacity: 1;
   }
+}
+
+.input:disabled~.ui-datepicker-trigger {
+  user-select: none;
+  pointer-events: none;
 }
 
 .dimension-edit--disabled {}

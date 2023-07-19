@@ -1118,6 +1118,10 @@ main {
           transform: translateY(-50%);
 }
 
+.edit-post__datepicker--left .ui-datepicker-trigger {
+  right: 60px !important;
+}
+
 .dimension-edit__copy-btn--left,
 .ui-datepicker-trigger--left {
   right: 60px !important;
@@ -1175,6 +1179,14 @@ main {
 
 .input:disabled ~ .dimension-edit__input-added .dimension-edit__copy-btn:hover {
   opacity: 1;
+}
+
+.input:disabled ~ .ui-datepicker-trigger {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
 }
 
 .ui-widget.ui-widget-content {
