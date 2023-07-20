@@ -706,9 +706,13 @@ main {
   width: 24px;
   height: 24px;
   background-color: transparent;
-  top: -1.25rem;
-  right: -1.875rem;
+  top: 1.25rem;
+  right: 1.25rem;
   left: auto;
+}
+
+.graph-modal__container--little .delete-dimension__title {
+  font-family: var(--font-main);
 }
 
 .graph-modal__container--text {
@@ -1189,6 +1193,167 @@ main {
   pointer-events: none;
 }
 
+.dimension-edit__input-added--left {
+  margin-right: 30px;
+}
+
+.dimension-edit__subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--main-color);
+}
+
+.dimension-edit--svg-blue .dimension-edit__input-added svg path {
+  stroke: var(--main-color);
+}
+
+.dimension-edit--svg-blue .add-entry__group--arrow {
+  position: relative;
+}
+
+.dimension-edit--svg-blue .add-entry__group--arrow::before {
+  content: "";
+  position: absolute;
+  right: 20px;
+  top: 18px;
+  width: 24px;
+  height: 24px;
+  background-color: #fff;
+  background-image: url(../img/select-arrow.svg);
+  background-repeat: no-repeat;
+  overflow: hidden;
+  z-index: 2;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+.select {
+  width: 100%;
+  position: relative;
+  z-index: 10;
+}
+
+.select__backdrop {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: transparent;
+  z-index: -1;
+  display: none;
+}
+
+.select.open .select__dropdown {
+  display: block;
+}
+
+.select.open .select__input {
+  border-bottom: none;
+}
+
+.select.open .select__backdrop {
+  display: block;
+}
+
+.select__input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+  display: flex;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+
+.select__input .select__arrow {
+  width: 24px;
+  height: 24px;
+  margin-left: auto;
+  pointer-events: none;
+}
+
+.select__input .select__arrow.open {
+  -webkit-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+
+.select__input span {
+  pointer-events: none;
+}
+
+.select__dropdown {
+  display: none;
+  position: absolute;
+  border: 1px solid var(--grey-color);
+  background-color: var(--white-color);
+  border-radius: 5px;
+  top: 46px;
+  left: 0;
+  right: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  -webkit-box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+          box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.select__dropdown .select__list .select__item {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+}
+
+.select__dropdown .select__list .select__item.selected {
+  background-color: var(--grey-color);
+}
+
+.select__dropdown .select__list .select__item:hover {
+  background-color: #eee;
+  -webkit-transition: 0.15 background-color ease-in;
+  -o-transition: 0.15 background-color ease-in;
+  transition: 0.15 background-color ease-in;
+}
+
+.select__input-value {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
+  pointer-events: none;
+}
+
+.add-entry__select--disabled {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  pointer-events: none;
+  color: var(--grey-color) !important;
+}
+
+.add-entry__select--disabled img {
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+}
+
 .ui-widget.ui-widget-content {
   background: var(--white-color);
   -webkit-box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.13);
@@ -1435,10 +1600,6 @@ a.ui-button:active,
 
 .input-group .input::placeholder {
   color: transparent;
-}
-
-.input-group .input:disabled ~ .label {
-  color: var(--grey-color);
 }
 
 .input-group .input:-moz-placeholder-shown ~ .label {
@@ -3101,6 +3262,7 @@ a.ui-button:active,
      -moz-column-gap: 3px;
           column-gap: 3px;
   margin-bottom: 5px;
+  white-space: nowrap;
   font-size: 0.6875rem;
   font-weight: 500;
   line-height: normal;

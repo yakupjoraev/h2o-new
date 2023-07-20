@@ -90,15 +90,13 @@
                   <form class="dimension-edit__form" action="#">
 
                     <div class="add-entry__group input-group input grid-column__4">
-                      <select class="add-entry__select" name="modification" id="select-modification" disabled>
-                        <option class="add-entry__select-option expectation" value="mod-1">
-                          Ожидание
-                        </option>
-                        <option class="add-entry__select-option" value="mod-2">Ожидание оплаты</option>
-                        <option class="add-entry__select-option" value="mod-3">Оплачено</option>
-                        <option class="add-entry__select-option" value="mod-4">В работе</option>
-                        <option class="add-entry__select-option" value="mod-5">Выполнено</option>
-                      </select>
+
+
+                      <!-- Select -->
+                      <div id="select" class="add-entry__select add-entry__select--disabled">
+                        <input type="hidden" class="hidden__input">
+                      </div>
+
                       <label class="add-entry__label label" for="">Статус заявки</label>
                     </div>
 
@@ -106,7 +104,7 @@
                     <div class="dimension-edit__group input-group grid-column__2">
                       <div class="edit-post__datepicker edit-post__datepicker--left">
                         <input class="edit-post__datepicker-input input  " type="text" id="datepicker-12"
-                          placeholder="Дата" value="25.01.22" disabled>
+                          placeholder="Дата" value="2023-04-30" disabled>
 
 
                         <button class="dimension-edit__copy-btn">
@@ -125,17 +123,19 @@
                         disabled>
                       <label class="dimension-edit__label label" for="">Желаемое время вызова мастера</label>
 
-                      <div class="dimension-edit__input-added">
+                      <div class="dimension-edit__input-added dimension-edit__input-added--left">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path
                             d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
                             stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
 
-                        <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left-30">
-                          <img src="./img/icons/copy.svg" alt="">
-                        </button>
+
                       </div>
+
+                      <button class="dimension-edit__copy-btn ">
+                        <img src="./img/icons/copy.svg" alt="">
+                      </button>
                     </div>
 
                     <div class="dimension-edit__group input-group grid-column__2">
@@ -502,7 +502,7 @@
           <div class="modal modal-center" id="modal2">
             <div class="graph-modal__container graph-modal__container--little" role="dialog" aria-modal="true">
               <button class="graph-modal__close close-modal-btn" aria-label="Закрыть модальное окно">
-                <img src="./img/icons/close-modal.svg" alt="">
+                <img src="./img/icons/close-modal-blue.svg" alt="">
               </button>
               <div class="graph-modal__content">
                 <!-- контент модального окна -->
@@ -536,7 +536,7 @@
               </button>
               <div class="graph-modal__content">
                 <!-- контент модального окна -->
-                <div class="dimension-edit dimension-edit--edit">
+                <div class="dimension-edit dimension-edit--edit dimension-edit--svg-blue">
                   <div class="dimension-edit__header">
                     <h1 class="dimension-edit__title">
                       Заявка №0000122
@@ -550,11 +550,11 @@
                     </div>
 
                     <div class="dimension-edit__edit-post">
-                      <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                          d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
-                          stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                      <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.3335 10.5092L7.43606 14.5833L16.6668 5.41666" stroke="#3288B4" stroke-width="2"
+                          stroke-linecap="round" stroke-linejoin="round" />
                       </svg>
+
 
                       Сохранить изменения
                     </div>
@@ -563,16 +563,12 @@
 
                   <form class="dimension-edit__form" action="#">
 
-                    <div class="add-entry__group input-group input grid-column__4">
-                      <select class="add-entry__select" name="modification" id="select-modifications">
-                        <option class="add-entry__select-option expectation" value="mod-1">
-                          Ожидание
-                        </option>
-                        <option class="add-entry__select-option" value="mod-2">Ожидание оплаты</option>
-                        <option class="add-entry__select-option" value="mod-3">Оплачено</option>
-                        <option class="add-entry__select-option" value="mod-4">В работе</option>
-                        <option class="add-entry__select-option" value="mod-5">Выполнено</option>
-                      </select>
+                    <div class="add-entry__group input-group input grid-column__4 add-entry__group--arrow">
+
+                      <!-- Select -->
+                      <div id="select2" class="add-entry__select">
+                        <input type="hidden" class="hidden__input">
+                      </div>
                       <label class="add-entry__label label" for="">Статус заявки</label>
                     </div>
 
@@ -580,7 +576,7 @@
                     <div class="dimension-edit__group input-group grid-column__2">
                       <div class="edit-post__datepicker">
                         <input class="edit-post__datepicker-input input  " type="text" id="datepicker-15"
-                          placeholder="Дата" value="25.01.22">
+                          placeholder="Дата" value="2023-04-30">
 
 
                         <button class="dimension-edit__copy-btn">
@@ -643,7 +639,7 @@
 
                     <div class="dimension-edit__group input-group grid-column__2">
                       <input class="dimension-edit__input input" type="text" placeholder="Номер заявки"
-                        value="747-9100120-547124-0000002/23">
+                        value="747-9100120-547124-0000002/23" disabled>
                       <label class="dimension-edit__label label" for="">Номер заявки</label>
 
                       <button class="dimension-edit__copy-btn">
@@ -1001,15 +997,11 @@
                   <form class="dimension-edit__form" action="#">
 
                     <div class="add-entry__group input-group input grid-column__4">
-                      <select class="add-entry__select" name="modification" id="select-modification2" disabled>
-                        <option class="add-entry__select-option expectation" value="mod-1">
-                          Выполнено
-                        </option>
-                        <option class="add-entry__select-option" value="mod-2">Ожидание оплаты</option>
-                        <option class="add-entry__select-option" value="mod-3">Оплачено</option>
-                        <option class="add-entry__select-option" value="mod-4">В работе</option>
-                        <option class="add-entry__select-option" value="mod-5">Ожидание</option>
-                      </select>
+
+                      <!-- Select -->
+                      <div id="select3" class="add-entry__select add-entry__select--disabled">
+                        <input type="hidden" class="hidden__input">
+                      </div>
                       <label class="add-entry__label label" for="">Статус заявки</label>
                     </div>
 
@@ -1017,7 +1009,7 @@
                     <div class="dimension-edit__group input-group grid-column__2">
                       <div class="edit-post__datepicker">
                         <input class="edit-post__datepicker-input input  " type="text" id="datepicker-18"
-                          placeholder="Дата" value="25.01.22" disabled>
+                          placeholder="Дата" value="2023-04-30" disabled>
 
                         <button class="dimension-edit__copy-btn">
                           <img src="./img/icons/copy.svg" alt="">
