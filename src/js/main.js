@@ -398,3 +398,19 @@ const select3 = new Select('#select3', {
 select.updateCircleColor(select.current.value);
 
 
+function historyLogs() {
+
+  const historyBlock = document.querySelector('[data-history-block]');
+
+  if (!historyBlock) {
+    return null
+  }
+
+  const historyBtn = document.querySelector('[data-history-btn]');
+
+  historyBtn.addEventListener('click', () => {
+    historyBlock.classList.toggle('active')
+  })
+}
+
+historyLogs();

@@ -1160,22 +1160,44 @@ $height: 46px;
   width: 100%;
 }
 
-.history-block {}
+.history-block {
+
+  &.active {
+    .history-block__arrow {
+      transform: rotate(0);
+    }
+
+    .history-block__list {
+      max-height: 500px;
+    }
+  }
+}
 
 .history-block__header {
   display: flex;
   align-items: center;
   column-gap: 15px;
   margin-bottom: 16px;
+
+  .comment-block__title {
+    margin-bottom: 0;
+  }
 }
 
 .comment-block__title {}
 
 .history-block__arrow {
+  transform: rotate(180deg);
+  transition: transform 0.2s linear;
   cursor: pointer;
 }
 
-.history-block__list {}
+.history-block__list {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s linear;
+  overflow-y: auto;
+}
 
 .history-block__item {
   display: flex;
