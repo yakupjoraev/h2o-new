@@ -103,7 +103,7 @@
             </h3>
           </li>
 
-          <li class="cards__item">
+          <li class="cards__item open-modal-btn" data-modal-id="modal3">
             <div class="cards__item-border"> </div>
             <div class="cards__item-top">
               <div class="cards__item-data">
@@ -482,5 +482,1328 @@
         </ul>
       </div>
     </div>
+  </div>
+
+  <div class="modals-list">
+    <ul class="modals-list__list">
+      <!-- <button class="open-modal-btn" data-modal-id="modal1">Open Modal 1</button> -->
+
+      <div class="modal" id="modal1">
+        <div class="graph-modal__container" role="dialog" aria-modal="true">
+          <button class=" graph-modal__close close-modal-btn" aria-label="Закрыть модальное окно">
+            <img src="./img/icons/close-modal.svg" alt="">
+
+            Закрыть
+          </button>
+          <div class="graph-modal__content">
+            <!-- контент модального окна -->
+            <div class="dimension-edit dimension-edit--disabled">
+              <div class="dimension-edit__header">
+                <h1 class="dimension-edit__title">
+                  Заявка №0000122
+                </h1>
+
+                <div class="dimension-edit__data">
+                  <span>от</span>
+                  <span>2023-04-30</span>
+                  <span> / </span>
+                  <span>9:05</span>
+                </div>
+
+                <div class="dimension-edit__edit-post">
+                  <svg width="18" height="17" viewBox="0 0 18 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M16.5 15.6667H9.83336M10.6667 3.16666L14 6.5M2.48061 15.4705L4.08325 15.15C4.67181 15.0323 4.96608 14.9734 5.2405 14.8658C5.48407 14.7703 5.71554 14.6464 5.93014 14.4967C6.17191 14.3281 6.38412 14.1159 6.80854 13.6915L15.5572 4.9428C15.8872 4.61279 16.0522 4.44778 16.1141 4.25751C16.1684 4.09014 16.1684 3.90985 16.1141 3.74248C16.0522 3.55221 15.8872 3.3872 15.5572 3.05719L14.1095 1.60947C13.7795 1.27946 13.6145 1.11445 13.4242 1.05263C13.2568 0.998245 13.0766 0.998245 12.9092 1.05263C12.7189 1.11445 12.5539 1.27946 12.2239 1.60947L3.4752 10.3582C3.05079 10.7826 2.83858 10.9948 2.66996 11.2366C2.52029 11.4512 2.39641 11.6826 2.30087 11.9262C2.19324 12.2006 2.13438 12.4949 2.01667 13.0834L1.69615 14.6861C1.63057 15.0139 1.59779 15.1779 1.64616 15.2948C1.68845 15.397 1.76966 15.4782 1.87189 15.5205C1.98881 15.5689 2.15275 15.5361 2.48061 15.4705Z"
+                      stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+
+                  Редактировать запись
+                </div>
+              </div>
+
+
+              <form class="dimension-edit__form" action="#">
+
+                <div class="add-entry__group input-group input grid-column__4">
+
+
+                  <!-- Select -->
+                  <div id="select" class="add-entry__select add-entry__select--disabled">
+                    <input type="hidden" class="hidden__input">
+                  </div>
+
+                  <label class="add-entry__label label" for="">Статус заявки</label>
+                </div>
+
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker edit-post__datepicker--left">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-12" placeholder="Дата"
+                      value="2023-04-30" disabled>
+
+
+                    <button class="dimension-edit__copy-btn">
+                      <img src="./img/icons/copy.svg" alt="">
+                    </button>
+
+                    <label class="edit-post__label label" for="">
+                      Желаемая дата вызова мастера
+                    </label>
+
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="" value="9:00 - 15:00" disabled>
+                  <label class="dimension-edit__label label" for="">Желаемое время вызова мастера</label>
+
+                  <div class="dimension-edit__input-added dimension-edit__input-added--left">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+
+                  </div>
+
+                  <button class="dimension-edit__copy-btn ">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-13" disabled>
+                    <label class="edit-post__label label" for="">Планируемая дата выполнения</label>
+                  </div>
+                </div>
+
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="" disabled>
+                  <label class="dimension-edit__label label" for="">Планируемое время выполнения</label>
+
+                  <div class="dimension-edit__input-added">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" disabled id="datepicker-14">
+                    <label class="edit-post__label label" for="">Дата выполнения</label>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Номер заявки" disabled
+                    value="747-9100120-547124-0000002/23">
+                  <label class="dimension-edit__label label" for="">Номер заявки</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Состав оказываемой услуги
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Внутренний номер обращения"
+                    value="0000122" disabled>
+                  <label class="dimension-edit__label label" for="">Внутренний номер обращения</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="add-entry__group add-entry__group--radio radio-group grid-column__2">
+                  <span class="add-entry__type radio-type">
+                    Тип услуги
+                  </span>
+
+
+                  <label class="add-entry__radio-label radio-label" for="owner1">
+                    <input class="add-entry__radio radio-input" type="radio" name="type-owner" id="owner1" checked
+                      disabled>
+                    <div class="add-entry__radio-decor radio-decor"></div>
+                    <span class="add-entry__radio-descr radio-descr">Поверка</span>
+                  </label>
+
+                  <label class="add-entry__radio-label radio-label" for="owner2">
+                    <input class="add-entry__radio radio-input" type="radio" name="type-owner" id="owner2" disabled>
+                    <div class="add-entry__radio-decor radio-decor"></div>
+                    <span class="add-entry__radio-descr radio-descr">Замена</span>
+                  </label>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Кол-во счетчиков ХВС" value="2"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Кол-во счетчиков ХВС</label>
+
+                  <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+
+                  <div class="dimension-edit__arrows">
+                    <div class="dimension-edit__arrow-up">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 15L12 9L18 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="dimension-edit__arrow-down">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Кол-во счетчиков ГВС" value="0"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Кол-во счетчиков ГВС</label>
+
+                  <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+
+                  <div class="dimension-edit__arrows">
+                    <div class="dimension-edit__arrow-up">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 15L12 9L18 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="dimension-edit__arrow-down">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Адрес оказания услуги
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__4">
+                  <input class="dimension-edit__input input" type="text" placeholder=""
+                    value="Зеленоградский административный округ" disabled>
+                  <label class="dimension-edit__label label" for="">Округ</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Город" value='Москва' disabled>
+                  <label class="dimension-edit__label label" for="">Город</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Район" value="Пресненский район"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Район</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Субъект РФ" value='Москва'
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Субъект РФ</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Улица" value="ул. Бакунинская"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Улица</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Дом" value="25" disabled>
+                  <label class="dimension-edit__label label" for="">Дом</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Строение" value="-" disabled>
+                  <label class="dimension-edit__label label" for="">Строение</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Корпус" value="1" disabled>
+                  <label class="dimension-edit__label label" for="">Корпус</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Подъезд" value="4" disabled>
+                  <label class="dimension-edit__label label" for="">Подъезд</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Квартира" value="157" disabled>
+                  <label class="dimension-edit__label label" for="">Квартира</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Этаж" value="10" disabled>
+                  <label class="dimension-edit__label label" for="">Этаж</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Домофон" value="157" disabled>
+                  <label class="dimension-edit__label label" for="">Домофон</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Контактные данные
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Фамилия" value="Иванов" disabled>
+                  <label class="dimension-edit__label label" for="">Фамилия</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Имя" value="Иван" disabled>
+                  <label class="dimension-edit__label label" for="">Имя</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Отчество" value="Иванович"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Отчество</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Телефон" value="8 960 789 56 54"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Телефон</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Электронная почта"
+                    value="ivanov@gmail.com" disabled>
+                  <label class="dimension-edit__label label" for="">Электронная почта</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__4">
+                  <textarea class="dimension-edit__textarea dimension-edit__input input"
+                    placeholder="Комментарий пользователя" name="Примечание" disabled>Поверка счетчиков при выпуске из производства или после ремонта и в эксплуатации проводится по методике поверки «Расходомеры - счетчики холодной й горячей воды ВСЭ» МП 4218-350-18151455-2006, согласованной с ВНИИМС, 23.06.2006 г Данные взяты из описания типа с ресурса (kip-guide.ru)
+                  </textarea>
+                  <label class="dimension-edit__label label" for="">Комментарий пользователя</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="comment-block grid-column__4">
+                  <h4 class="comment-block__title">
+                    Комментарии к заявке
+                  </h4>
+
+                  <textarea class="dimension-edit__textarea dimension-edit__input input"
+                    placeholder="Комментарии к заявке" name="Комментарии к заявке" disabled>Очень срочная заявка, необходимо сделать оперативно
+              </textarea>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__footer-btns grid-column__4">
+                  <button type="button" class="dimension-edit__save edit-post__save btn-disable ">Сохранить
+                    изменения</button>
+                  <button type="button" class="dimension-edit__delete btn-secondary edit-post__delete">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.7639 12H10.0556M3 8.00003H5.5M4 12H5.5M4.5 16H5.5M9.96153 12.4896L9.07002 15.4486C8.73252 16.5688 8.56376 17.1289 8.70734 17.4633C8.83199 17.7537 9.08656 17.9681 9.39391 18.0415C9.74792 18.1261 10.2711 17.8645 11.3175 17.3413L19.1378 13.4311C20.059 12.9705 20.5197 12.7402 20.6675 12.4285C20.7961 12.1573 20.7961 11.8427 20.6675 11.5715C20.5197 11.2598 20.059 11.0295 19.1378 10.5689L11.3068 6.65342C10.2633 6.13168 9.74156 5.87081 9.38789 5.95502C9.0808 6.02815 8.82627 6.24198 8.70128 6.53184C8.55731 6.86569 8.72427 7.42461 9.05819 8.54246L9.96261 11.5701C10.0137 11.7411 10.0392 11.8266 10.0493 11.9137C10.0583 11.991 10.0582 12.069 10.049 12.1463C10.0387 12.2334 10.013 12.3188 9.96153 12.4896Z"
+                        stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    Отправить в
+                    mos.ru</button>
+
+                  <button type="button" class="dimension-edit__done-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 5L15 15M15 5L5 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    Убрать в архив
+                  </button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+
+      <button class="open-modal-btn" data-modal-id="modal2">Open Modal 2</button>
+
+      <div class="modal modal-center" id="modal2">
+        <div class="graph-modal__container graph-modal__container--little" role="dialog" aria-modal="true">
+          <button class="graph-modal__close close-modal-btn" aria-label="Закрыть модальное окно">
+            <img src="./img/icons/close-modal-blue.svg" alt="">
+          </button>
+          <div class="graph-modal__content">
+            <!-- контент модального окна -->
+            <form action="#" class="delete-dimension">
+              <h3 class="delete-dimension__title">
+                В архив
+              </h3>
+
+              <p class="delete-dimension__descr">
+                Вы действительно хотите перенести запись в архив?
+              </p>
+
+              <div class="delete-dimension__btns">
+                <button type="submit" class="delete-dimension__btn btn-primary">Нет</button>
+                <button type="submit" class="delete-dimension__btn btn-secondary">Да</button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+
+      <button class="open-modal-btn" data-modal-id="modal3">Open Modal 3</button>
+
+      <div class="modal" id="modal3">
+        <div class="graph-modal__container" role="dialog" aria-modal="true">
+          <button class=" graph-modal__close close-modal-btn" aria-label="Закрыть модальное окно">
+            <img src="./img/icons/close-modal.svg" alt="">
+
+            Закрыть
+          </button>
+          <div class="graph-modal__content">
+            <!-- контент модального окна -->
+            <div class="dimension-edit dimension-edit--edit dimension-edit--svg-blue">
+              <div class="dimension-edit__header">
+                <h1 class="dimension-edit__title">
+                  Заявка №0000122
+                </h1>
+
+                <div class="dimension-edit__data">
+                  <span>от</span>
+                  <span>2023-04-30</span>
+                  <span> / </span>
+                  <span>9:05</span>
+                </div>
+
+                <div class="dimension-edit__edit-post">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3.3335 10.5092L7.43606 14.5833L16.6668 5.41666" stroke="#3288B4" stroke-width="2"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+
+
+                  Сохранить изменения
+                </div>
+              </div>
+
+
+              <form class="dimension-edit__form" action="#">
+
+                <div class="add-entry__group input-group input grid-column__4 add-entry__group--arrow">
+
+                  <!-- Select -->
+                  <div id="select2" class="add-entry__select">
+                    <input type="hidden" class="hidden__input">
+                  </div>
+                  <label class="add-entry__label label" for="">Статус заявки</label>
+                </div>
+
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-15" placeholder="Дата"
+                      value="2023-04-30">
+
+
+                    <button class="dimension-edit__copy-btn">
+                      <img src="./img/icons/copy.svg" alt="">
+                    </button>
+
+                    <label class="edit-post__label label" for="">
+                      Желаемая дата вызова мастера
+                    </label>
+
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="" value="9:00 - 15:00">
+                  <label class="dimension-edit__label label" for="">Желаемое время вызова мастера</label>
+
+                  <div class="dimension-edit__input-added">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left-30">
+                      <img src="./img/icons/copy.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-16">
+                    <label class="edit-post__label label" for="">Планируемая дата выполнения</label>
+                  </div>
+                </div>
+
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="">
+                  <label class="dimension-edit__label label" for="">Планируемое время выполнения</label>
+
+                  <div class="dimension-edit__input-added">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-17">
+                    <label class="edit-post__label label" for="">Дата выполнения</label>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Номер заявки"
+                    value="747-9100120-547124-0000002/23" disabled>
+                  <label class="dimension-edit__label label" for="">Номер заявки</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Состав оказываемой услуги
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Внутренний номер обращения"
+                    value="0000122">
+                  <label class="dimension-edit__label label" for="">Внутренний номер обращения</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="add-entry__group add-entry__group--radio radio-group grid-column__2">
+                  <span class="add-entry__type radio-type">
+                    Тип услуги
+                  </span>
+
+
+                  <label class="add-entry__radio-label radio-label" for="owner1">
+                    <input class="add-entry__radio radio-input" type="radio" name="type-owner" id="owner1" checked>
+                    <div class="add-entry__radio-decor radio-decor"></div>
+                    <span class="add-entry__radio-descr radio-descr">Поверка</span>
+                  </label>
+
+                  <label class="add-entry__radio-label radio-label" for="owner2">
+                    <input class="add-entry__radio radio-input" type="radio" name="type-owner" id="owner2">
+                    <div class="add-entry__radio-decor radio-decor"></div>
+                    <span class="add-entry__radio-descr radio-descr">Замена</span>
+                  </label>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Кол-во счетчиков ХВС" value="2">
+                  <label class="dimension-edit__label label" for="">Кол-во счетчиков ХВС</label>
+
+                  <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+
+                  <div class="dimension-edit__arrows">
+                    <div class="dimension-edit__arrow-up">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 15L12 9L18 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="dimension-edit__arrow-down">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Кол-во счетчиков ГВС" value="0">
+                  <label class="dimension-edit__label label" for="">Кол-во счетчиков ГВС</label>
+
+                  <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+
+                  <div class="dimension-edit__arrows">
+                    <div class="dimension-edit__arrow-up">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 15L12 9L18 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="dimension-edit__arrow-down">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Адрес оказания услуги
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__4">
+                  <input class="dimension-edit__input input" type="text" placeholder=""
+                    value="Зеленоградский административный округ">
+                  <label class="dimension-edit__label label" for="">Округ</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Город" value='Москва'>
+                  <label class="dimension-edit__label label" for="">Город</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Район" value="Пресненский район">
+                  <label class="dimension-edit__label label" for="">Район</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Субъект РФ" value='Москва'>
+                  <label class="dimension-edit__label label" for="">Субъект РФ</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Улица" value="ул. Бакунинская">
+                  <label class="dimension-edit__label label" for="">Улица</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Дом" value="25">
+                  <label class="dimension-edit__label label" for="">Дом</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Строение" value="-">
+                  <label class="dimension-edit__label label" for="">Строение</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Корпус" value="1">
+                  <label class="dimension-edit__label label" for="">Корпус</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Подъезд" value="4">
+                  <label class="dimension-edit__label label" for="">Подъезд</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Квартира" value="157">
+                  <label class="dimension-edit__label label" for="">Квартира</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Этаж" value="10">
+                  <label class="dimension-edit__label label" for="">Этаж</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Домофон" value="157">
+                  <label class="dimension-edit__label label" for="">Домофон</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Контактные данные
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Фамилия" value="Иванов">
+                  <label class="dimension-edit__label label" for="">Фамилия</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Имя" value="Иван">
+                  <label class="dimension-edit__label label" for="">Имя</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Отчество" value="Иванович">
+                  <label class="dimension-edit__label label" for="">Отчество</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Телефон" value="8 960 789 56 54">
+                  <label class="dimension-edit__label label" for="">Телефон</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Электронная почта"
+                    value="ivanov@gmail.com">
+                  <label class="dimension-edit__label label" for="">Электронная почта</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__4">
+                  <textarea class="dimension-edit__textarea dimension-edit__input input"
+                    placeholder="Комментарий пользователя" name="Примечание">Поверка счетчиков при выпуске из производства или после ремонта и в эксплуатации проводится по методике поверки «Расходомеры - счетчики холодной й горячей воды ВСЭ» МП 4218-350-18151455-2006, согласованной с ВНИИМС, 23.06.2006 г Данные взяты из описания типа с ресурса (kip-guide.ru)
+                  </textarea>
+                  <label class="dimension-edit__label label" for="">Комментарий пользователя</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="comment-block grid-column__4">
+                  <h4 class="comment-block__title">
+                    Комментарии к заявке
+                  </h4>
+
+                  <textarea class="dimension-edit__textarea dimension-edit__input input"
+                    placeholder="Комментарии к заявке" name="Комментарии к заявке">Очень срочная заявка, необходимо сделать оперативно
+              </textarea>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__footer-btns grid-column__4">
+                  <button type="button" class="dimension-edit__save edit-post__save btn-disable ">Сохранить
+                    изменения</button>
+                  <button type="button" class="dimension-edit__delete btn-secondary edit-post__delete">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M20.7639 12H10.0556M3 8.00003H5.5M4 12H5.5M4.5 16H5.5M9.96153 12.4896L9.07002 15.4486C8.73252 16.5688 8.56376 17.1289 8.70734 17.4633C8.83199 17.7537 9.08656 17.9681 9.39391 18.0415C9.74792 18.1261 10.2711 17.8645 11.3175 17.3413L19.1378 13.4311C20.059 12.9705 20.5197 12.7402 20.6675 12.4285C20.7961 12.1573 20.7961 11.8427 20.6675 11.5715C20.5197 11.2598 20.059 11.0295 19.1378 10.5689L11.3068 6.65342C10.2633 6.13168 9.74156 5.87081 9.38789 5.95502C9.0808 6.02815 8.82627 6.24198 8.70128 6.53184C8.55731 6.86569 8.72427 7.42461 9.05819 8.54246L9.96261 11.5701C10.0137 11.7411 10.0392 11.8266 10.0493 11.9137C10.0583 11.991 10.0582 12.069 10.049 12.1463C10.0387 12.2334 10.013 12.3188 9.96153 12.4896Z"
+                        stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    Отправить в
+                    mos.ru</button>
+
+                  <button type="button" class="dimension-edit__done-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M5 5L15 15M15 5L5 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    </svg>
+
+                    Убрать в архив
+                  </button>
+                </div>
+
+              </form>
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <div class="dimension-edit__alert">
+          Данные по заявке №0000122
+          успешно отправлены в mos.ru
+        </div>
+      </div>
+
+
+      <button class="open-modal-btn" data-modal-id="modal4">Open Modal 4</button>
+
+      <div class="modal" id="modal4">
+        <div class="graph-modal__container" role="dialog" aria-modal="true">
+          <button class=" graph-modal__close close-modal-btn" aria-label="Закрыть модальное окно">
+            <img src="./img/icons/close-modal.svg" alt="">
+
+            Закрыть
+          </button>
+          <div class="graph-modal__content">
+            <!-- контент модального окна -->
+            <div class="dimension-edit dimension-edit--edit">
+              <div class="dimension-edit__header">
+                <h1 class="dimension-edit__title">
+                  Заявка №0000122
+                </h1>
+
+                <div class="dimension-edit__data">
+                  <span>от</span>
+                  <span>2023-04-30</span>
+                  <span> / </span>
+                  <span>9:05</span>
+                </div>
+
+              </div>
+
+
+              <form class="dimension-edit__form" action="#">
+
+                <div class="add-entry__group input-group input grid-column__4">
+
+                  <!-- Select -->
+                  <div id="select3" class="add-entry__select add-entry__select--disabled">
+                    <input type="hidden" class="hidden__input">
+                  </div>
+                  <label class="add-entry__label label" for="">Статус заявки</label>
+                </div>
+
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-18" placeholder="Дата"
+                      value="2023-04-30" disabled>
+
+                    <button class="dimension-edit__copy-btn">
+                      <img src="./img/icons/copy.svg" alt="">
+                    </button>
+
+                    <label class="edit-post__label label" for="">
+                      Желаемая дата вызова мастера
+                    </label>
+
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="" value="9:00 - 15:00" disabled>
+                  <label class="dimension-edit__label label" for="">Желаемое время вызова мастера</label>
+
+                  <div class="dimension-edit__input-added">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+                    <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left-30">
+                      <img src="./img/icons/copy.svg" alt="">
+                    </button>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" id="datepicker-19" disabled>
+                    <label class="edit-post__label label" for="">Планируемая дата выполнения</label>
+                  </div>
+                </div>
+
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="" disabled>
+                  <label class="dimension-edit__label label" for="">Планируемое время выполнения</label>
+
+                  <div class="dimension-edit__input-added">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M12 8V12L14.5 13.5M20 12C20 16.4183 16.4183 20 12 20C7.58172 20 4 16.4183 4 12C4 7.58172 7.58172 4 12 4C16.4183 4 20 7.58172 20 12Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <div class="edit-post__datepicker">
+                    <input class="edit-post__datepicker-input input  " type="text" disabled id="datepicker-20">
+                    <label class="edit-post__label label" for="">Дата выполнения</label>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Номер заявки" disabled
+                    value="747-9100120-547124-0000002/23">
+                  <label class="dimension-edit__label label" for="">Номер заявки</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Состав оказываемой услуги
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Внутренний номер обращения"
+                    value="0000122" disabled>
+                  <label class="dimension-edit__label label" for="">Внутренний номер обращения</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="add-entry__group add-entry__group--radio radio-group grid-column__2">
+                  <span class="add-entry__type radio-type">
+                    Тип услуги
+                  </span>
+
+
+                  <label class="add-entry__radio-label radio-label" for="owner1">
+                    <input class="add-entry__radio radio-input" type="radio" name="type-owner" id="owner1" checked
+                      disabled>
+                    <div class="add-entry__radio-decor radio-decor"></div>
+                    <span class="add-entry__radio-descr radio-descr">Поверка</span>
+                  </label>
+
+                  <label class="add-entry__radio-label radio-label" for="owner2">
+                    <input class="add-entry__radio radio-input" type="radio" name="type-owner" id="owner2" disabled>
+                    <div class="add-entry__radio-decor radio-decor"></div>
+                    <span class="add-entry__radio-descr radio-descr">Замена</span>
+                  </label>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Кол-во счетчиков ХВС" value="2"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Кол-во счетчиков ХВС</label>
+
+                  <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+
+                  <div class="dimension-edit__arrows">
+                    <div class="dimension-edit__arrow-up">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 15L12 9L18 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="dimension-edit__arrow-down">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Кол-во счетчиков ГВС" value="0"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Кол-во счетчиков ГВС</label>
+
+                  <button class="dimension-edit__copy-btn dimension-edit__copy-btn--left">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+
+                  <div class="dimension-edit__arrows">
+                    <div class="dimension-edit__arrow-up">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 15L12 9L18 15" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                    <div class="dimension-edit__arrow-down">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6 9L12 15L18 9" stroke="#969696" stroke-width="2" stroke-linecap="round"
+                          stroke-linejoin="round" />
+                      </svg>
+
+                    </div>
+                  </div>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Адрес оказания услуги
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__4">
+                  <input class="dimension-edit__input input" type="text" placeholder=""
+                    value="Зеленоградский административный округ" disabled>
+                  <label class="dimension-edit__label label" for="">Округ</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Город" value='Москва' disabled>
+                  <label class="dimension-edit__label label" for="">Город</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Район" value="Пресненский район"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Район</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Субъект РФ" value='Москва'
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Субъект РФ</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Улица" value="ул. Бакунинская"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Улица</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Дом" value="25" disabled>
+                  <label class="dimension-edit__label label" for="">Дом</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Строение" value="-" disabled>
+                  <label class="dimension-edit__label label" for="">Строение</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Корпус" value="1" disabled>
+                  <label class="dimension-edit__label label" for="">Корпус</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Подъезд" value="4" disabled>
+                  <label class="dimension-edit__label label" for="">Подъезд</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Квартира" value="157" disabled>
+                  <label class="dimension-edit__label label" for="">Квартира</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Этаж" value="10" disabled>
+                  <label class="dimension-edit__label label" for="">Этаж</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Домофон" value="157" disabled>
+                  <label class="dimension-edit__label label" for="">Домофон</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <h4 class="dimension-edit__subtitle grid-column__4">
+                  Контактные данные
+                </h4>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Фамилия" value="Иванов" disabled>
+                  <label class="dimension-edit__label label" for="">Фамилия</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Имя" value="Иван" disabled>
+                  <label class="dimension-edit__label label" for="">Имя</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__1">
+                  <input class="dimension-edit__input input" type="text" placeholder="Отчество" value="Иванович"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Отчество</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Телефон" value="8 960 789 56 54"
+                    disabled>
+                  <label class="dimension-edit__label label" for="">Телефон</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__2">
+                  <input class="dimension-edit__input input" type="text" placeholder="Электронная почта"
+                    value="ivanov@gmail.com" disabled>
+                  <label class="dimension-edit__label label" for="">Электронная почта</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__group input-group grid-column__4">
+                  <textarea class="dimension-edit__textarea dimension-edit__input input"
+                    placeholder="Комментарий пользователя" name="Примечание" disabled>Поверка счетчиков при выпуске из производства или после ремонта и в эксплуатации проводится по методике поверки «Расходомеры - счетчики холодной й горячей воды ВСЭ» МП 4218-350-18151455-2006, согласованной с ВНИИМС, 23.06.2006 г Данные взяты из описания типа с ресурса (kip-guide.ru)
+                  </textarea>
+                  <label class="dimension-edit__label label" for="">Комментарий пользователя</label>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="comment-block grid-column__4">
+                  <h4 class="comment-block__title">
+                    Комментарии к заявке
+                  </h4>
+
+                  <textarea class="dimension-edit__textarea dimension-edit__input input"
+                    placeholder="Комментарии к заявке" name="Комментарии к заявке" disabled>Очень срочная заявка, необходимо сделать оперативно
+              </textarea>
+
+                  <button class="dimension-edit__copy-btn">
+                    <img src="./img/icons/copy.svg" alt="">
+                  </button>
+                </div>
+
+                <div class="dimension-edit__footer-btns grid-column__4">
+                  <div class="dimension-edit__done-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path
+                        d="M7.5 11.0186L9.03846 12.5001L12.5 9.16675M7 15.8334C4.51472 15.8334 2.5 13.8371 2.5 11.3745C2.5 9.33348 4 7.448 6.25 7.08341C6.95578 5.40539 8.62616 4.16675 10.5744 4.16675C13.07 4.16675 15.1098 6.10217 15.25 8.54175C16.5744 9.12082 17.5 10.542 17.5 12.0808C17.5 14.1533 15.8211 15.8334 13.75 15.8334L7 15.8334Z"
+                        stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    </svg>
+
+
+                    Запись в архиве
+                  </div>
+                </div>
+
+              </form>
+            </div>
+
+
+          </div>
+
+
+        </div>
+        <div class="dimension-edit__alert">
+          Заявка №0000122 успешно
+          добавлена в архив
+        </div>
+      </div>
+    </ul>
   </div>
 </section>
