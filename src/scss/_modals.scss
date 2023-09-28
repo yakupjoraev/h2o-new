@@ -1148,3 +1148,58 @@ $height: 46px;
     filter: grayscale(1);
   }
 }
+
+.modal.accounts-add {
+
+  .graph-modal__content {
+    min-height: 100vh;
+  }
+}
+
+.dimension-edit__save.btn-view {
+  width: 100%;
+}
+
+.history-block {}
+
+.history-block__header {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+  margin-bottom: 16px;
+}
+
+.comment-block__title {}
+
+.history-block__arrow {
+  cursor: pointer;
+}
+
+.history-block__list {}
+
+.history-block__item {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  column-gap: 5px;
+  padding: 15px 0;
+  border-bottom: 1px solid #DDD;
+  color: var(--Black, #000);
+  font-family: var(--font-main);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: normal;
+}
+
+.history-block__item-time {}
+
+.history-block__item-border {
+  width: 2px;
+  min-width: 2px;
+  height: 12px;
+  background-color: #000;
+}
+
+.history-block__item-date {}
+
+.history-block__item-text {}

@@ -52,3 +52,30 @@
     }
   }
 }
+
+.nav-accounts {
+  display: flex;
+  align-items: center;
+  column-gap: 40px;
+
+}
+
+.nav__link-text {
+  color: var(--main-color);
+}
+
+.nav__link:first-child {
+  margin-right: 32px;
+
+  @media (max-width: $breakpoint992) {
+    margin-right: 0;
+  }
+}
+
+.nav__link:last-child {
+  margin-left: auto;
+
+  .nav__link-text {
+    color: var(--text-color);
+  }
+}

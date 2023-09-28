@@ -1,0 +1,123 @@
+.accounts {
+  padding: 30px 0;
+
+  // .accounts__inner
+
+  &__inner {}
+
+  // .accounts__top
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+
+  // .accounts__top-title
+
+  &__top-title {
+    font-family: var(--font-main);
+    font-weight: 500;
+  }
+
+  // .accounts__top-add
+
+  &__top-add {
+    width: fit-content;
+  }
+
+  // .accounts__top-icon
+
+  &__top-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .accounts__top-text
+
+  &__top-text {}
+
+  // .accounts__list
+
+  &__list {
+    margin-bottom: 30px;
+  }
+
+  // .accounts__item
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+    padding: 16px 10px;
+
+    &:nth-child(even) {
+      border-bottom: 1px solid var(--Grey, #DDD);
+      border-top: 1px solid var(--Grey, #DDD);
+      background: #F3F3F3;
+    }
+  }
+
+  // .accounts__item-info
+
+  &__item-info {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--main-color);
+    letter-spacing: 0.2px;
+  }
+
+  // .accounts__item-count
+
+  &__item-count {}
+
+  // .accounts__item-border
+
+  &__item-border {
+    width: 2px;
+    min-width: 2px;
+    height: 20px;
+    background-color: var(--main-color);
+  }
+
+  // .accounts__item-name
+
+  &__item-name {}
+
+  // .accounts__item-actions
+
+  &__item-actions {
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+  }
+
+  // .accounts__item-action
+
+  &__item-action {
+    display: flex;
+    align-items: center;
+    column-gap: 5px;
+
+    color: var(--Blue, var(--Blue, #3288B4));
+    font-family: var(--font-main);
+    font-size: 14px;
+    font-weight: 600;
+    line-height: normal;
+    cursor: pointer;
+  }
+
+  // .accounts__item-action--grey
+
+  &__item-action--grey {
+    color: var(--Grey-dark, #969696);
+  }
+}

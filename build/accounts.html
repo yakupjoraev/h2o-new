@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Open+Sans:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="./css/jquery-ui.min.css">
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body class="main__body" style="background: #F8F8F8;">
+  <!-- Header -->
+  <header class="header">
+  <div class="container">
+    <nav class="nav nav-accounts">
+      <a class="nav__link" href="#">
+        <img class="nav__link-img" src="./img/logo.svg" alt="logo">
+      </a>
+
+      <a class="nav__link" href="#">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+          <path
+            d="M8 6L21 6.00078M8 12L21 12.0008M8 18L21 18.0007M3 6.5H4V5.5H3V6.5ZM3 12.5H4V11.5H3V12.5ZM3 18.5H4V17.5H3V18.5Z"
+            stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="nav__link-text">Архив заявок</span>
+      </a>
+
+      <a class="nav__link" href="#">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M6 12H18M6 12L11 7M6 12L11 17" stroke="#3288B4" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+
+
+        <span class="nav__link-text">К заявкам</span>
+      </a>
+
+      <a class="nav__link" href="#">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M7 14L11 10M11 10L7 6M11 10H1M10 19H14.2C15.8802 19 16.7202 19 17.362 18.673C17.9265 18.3854 18.3854 17.9265 18.673 17.362C19 16.7202 19 15.8802 19 14.2V5.8C19 4.11984 19 3.27976 18.673 2.63803C18.3854 2.07354 17.9265 1.6146 17.362 1.32698C16.7202 1 15.8802 1 14.2 1H10"
+            stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+        </svg>
+
+        <span class="nav__link-text">Выход</span>
+      </a>
+    </nav>
+  </div>
+</header>
+
+  <!-- Main Page -->
+  <main>
+    <section class="accounts">
+  <div class="container">
+    <div class="accounts__inner">
+      <div class="accounts__top">
+        <h1 class="accounts__top-title main-title">
+          Список учетных записей
+        </h1>
+
+        <a class="accounts__top-add btn-primary" href="#">
+          <span class="accounts__top-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M6 12H18M12 6V18" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            </svg>
+
+
+          </span>
+
+          <span class="accounts__top-text">
+            Добавить новую учетную запись
+          </span>
+        </a>
+      </div>
+
+      <div class="accounts__list">
+        <div class="accounts__item">
+          <div class="accounts__item-info">
+            <div class="accounts__item-count">1012</div>
+            <div class="accounts__item-border"></div>
+            <div class="accounts__item-name">Иванов И.B.</div>
+          </div>
+
+          <div class="accounts__item-actions">
+            <div class="accounts__item-action">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 21H13M14 5.99997L18 9.99997M4.17669 20.7646L6.09986 20.38C6.80612 20.2387 7.15926 20.1681 7.48855 20.039C7.78084 19.9243 8.05861 19.7757 8.31613 19.5961C8.60625 19.3937 8.8609 19.1391 9.3702 18.6298L19.8686 8.13134C20.2646 7.73532 20.4626 7.53732 20.5368 7.30899C20.6021 7.10814 20.6021 6.8918 20.5368 6.69095C20.4626 6.46263 20.2646 6.26462 19.8686 5.8686L18.1314 4.13134C17.7353 3.73532 17.5373 3.53732 17.309 3.46313C17.1082 3.39787 16.8918 3.39787 16.691 3.46313C16.4626 3.53732 16.2646 3.73533 15.8686 4.13134L5.3702 14.6298C4.8609 15.1391 4.60625 15.3937 4.40391 15.6838C4.22431 15.9414 4.07565 16.2191 3.96101 16.5114C3.83185 16.8407 3.76122 17.1938 3.61997 17.9001L3.23533 19.8233C3.15664 20.2167 3.1173 20.4134 3.17535 20.5537C3.2261 20.6764 3.32355 20.7739 3.44622 20.8246C3.58653 20.8827 3.78325 20.8433 4.17669 20.7646Z"
+                  stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Редактировать</span>
+            </div>
+
+            <div class="accounts__item-action accounts__item-action--grey">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
+                  stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Удалить</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accounts__item">
+          <div class="accounts__item-info">
+            <div class="accounts__item-count">1012</div>
+            <div class="accounts__item-border"></div>
+            <div class="accounts__item-name">Иванов И.B.</div>
+          </div>
+
+          <div class="accounts__item-actions">
+            <div class="accounts__item-action">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 21H13M14 5.99997L18 9.99997M4.17669 20.7646L6.09986 20.38C6.80612 20.2387 7.15926 20.1681 7.48855 20.039C7.78084 19.9243 8.05861 19.7757 8.31613 19.5961C8.60625 19.3937 8.8609 19.1391 9.3702 18.6298L19.8686 8.13134C20.2646 7.73532 20.4626 7.53732 20.5368 7.30899C20.6021 7.10814 20.6021 6.8918 20.5368 6.69095C20.4626 6.46263 20.2646 6.26462 19.8686 5.8686L18.1314 4.13134C17.7353 3.73532 17.5373 3.53732 17.309 3.46313C17.1082 3.39787 16.8918 3.39787 16.691 3.46313C16.4626 3.53732 16.2646 3.73533 15.8686 4.13134L5.3702 14.6298C4.8609 15.1391 4.60625 15.3937 4.40391 15.6838C4.22431 15.9414 4.07565 16.2191 3.96101 16.5114C3.83185 16.8407 3.76122 17.1938 3.61997 17.9001L3.23533 19.8233C3.15664 20.2167 3.1173 20.4134 3.17535 20.5537C3.2261 20.6764 3.32355 20.7739 3.44622 20.8246C3.58653 20.8827 3.78325 20.8433 4.17669 20.7646Z"
+                  stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Редактировать</span>
+            </div>
+
+            <div class="accounts__item-action accounts__item-action--grey">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
+                  stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Удалить</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accounts__item">
+          <div class="accounts__item-info">
+            <div class="accounts__item-count">1012</div>
+            <div class="accounts__item-border"></div>
+            <div class="accounts__item-name">Иванов И.B.</div>
+          </div>
+
+          <div class="accounts__item-actions">
+            <div class="accounts__item-action">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 21H13M14 5.99997L18 9.99997M4.17669 20.7646L6.09986 20.38C6.80612 20.2387 7.15926 20.1681 7.48855 20.039C7.78084 19.9243 8.05861 19.7757 8.31613 19.5961C8.60625 19.3937 8.8609 19.1391 9.3702 18.6298L19.8686 8.13134C20.2646 7.73532 20.4626 7.53732 20.5368 7.30899C20.6021 7.10814 20.6021 6.8918 20.5368 6.69095C20.4626 6.46263 20.2646 6.26462 19.8686 5.8686L18.1314 4.13134C17.7353 3.73532 17.5373 3.53732 17.309 3.46313C17.1082 3.39787 16.8918 3.39787 16.691 3.46313C16.4626 3.53732 16.2646 3.73533 15.8686 4.13134L5.3702 14.6298C4.8609 15.1391 4.60625 15.3937 4.40391 15.6838C4.22431 15.9414 4.07565 16.2191 3.96101 16.5114C3.83185 16.8407 3.76122 17.1938 3.61997 17.9001L3.23533 19.8233C3.15664 20.2167 3.1173 20.4134 3.17535 20.5537C3.2261 20.6764 3.32355 20.7739 3.44622 20.8246C3.58653 20.8827 3.78325 20.8433 4.17669 20.7646Z"
+                  stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Редактировать</span>
+            </div>
+
+            <div class="accounts__item-action accounts__item-action--grey">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
+                  stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Удалить</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="accounts__item">
+          <div class="accounts__item-info">
+            <div class="accounts__item-count">1012</div>
+            <div class="accounts__item-border"></div>
+            <div class="accounts__item-name">Иванов И.B.</div>
+          </div>
+
+          <div class="accounts__item-actions">
+            <div class="accounts__item-action">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M21 21H13M14 5.99997L18 9.99997M4.17669 20.7646L6.09986 20.38C6.80612 20.2387 7.15926 20.1681 7.48855 20.039C7.78084 19.9243 8.05861 19.7757 8.31613 19.5961C8.60625 19.3937 8.8609 19.1391 9.3702 18.6298L19.8686 8.13134C20.2646 7.73532 20.4626 7.53732 20.5368 7.30899C20.6021 7.10814 20.6021 6.8918 20.5368 6.69095C20.4626 6.46263 20.2646 6.26462 19.8686 5.8686L18.1314 4.13134C17.7353 3.73532 17.5373 3.53732 17.309 3.46313C17.1082 3.39787 16.8918 3.39787 16.691 3.46313C16.4626 3.53732 16.2646 3.73533 15.8686 4.13134L5.3702 14.6298C4.8609 15.1391 4.60625 15.3937 4.40391 15.6838C4.22431 15.9414 4.07565 16.2191 3.96101 16.5114C3.83185 16.8407 3.76122 17.1938 3.61997 17.9001L3.23533 19.8233C3.15664 20.2167 3.1173 20.4134 3.17535 20.5537C3.2261 20.6764 3.32355 20.7739 3.44622 20.8246C3.58653 20.8827 3.78325 20.8433 4.17669 20.7646Z"
+                  stroke="#3288B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Редактировать</span>
+            </div>
+
+            <div class="accounts__item-action accounts__item-action--grey">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M18 6L17.1991 18.0129C17.129 19.065 17.0939 19.5911 16.8667 19.99C16.6666 20.3412 16.3648 20.6235 16.0011 20.7998C15.588 21 15.0607 21 14.0062 21H9.99377C8.93927 21 8.41202 21 7.99889 20.7998C7.63517 20.6235 7.33339 20.3412 7.13332 19.99C6.90607 19.5911 6.871 19.065 6.80086 18.0129L6 6M4 6H20M16 6L15.7294 5.18807C15.4671 4.40125 15.3359 4.00784 15.0927 3.71698C14.8779 3.46013 14.6021 3.26132 14.2905 3.13878C13.9376 3 13.523 3 12.6936 3H11.3064C10.477 3 10.0624 3 9.70951 3.13878C9.39792 3.26132 9.12208 3.46013 8.90729 3.71698C8.66405 4.00784 8.53292 4.40125 8.27064 5.18807L8 6"
+                  stroke="#969696" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+
+              <span>Удалить</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <nav class="dimension-guide__nav nav-table">
+        <div class="nav-table__info">
+          <span class="nav-table__info-text">
+            Показано отчетов
+          </span>
+
+          <span class="nav-table__info-count">
+            12 из 356
+          </span>
+        </div>
+
+        <div class="nav-table__pages">
+          <a class="nav-table__prev" href="#">
+            <img class="nav-table__prev-img" src="./img/icons/arrow-prev.svg" alt="prev">
+          </a>
+
+          <ul class="nav-table__list">
+            <li class="nav-table__item nav-table__item--active">
+              <a class="nav-table__item-num" href="#">1</a>
+            </li>
+
+            <li class="nav-table__item">
+              <a class="nav-table__item-num" href="#">2</a>
+            </li>
+
+            <li class="nav-table__item">
+              <a class="nav-table__item-num" href="#">3</a>
+            </li>
+
+            <li class="nav-table__item">
+              <a class="nav-table__item-num" href="#">4</a>
+            </li>
+
+            <li class="nav-table__item">
+              <a class="nav-table__item-num" href="#">...</a>
+            </li>
+
+            <li class="nav-table__item">
+              <a class="nav-table__item-num" href="#">29</a>
+            </li>
+          </ul>
+
+          <a class="nav-table__next" href="#">
+            <img class="nav-table__next-img" src="./img/icons/arrow-next.svg" alt="next">
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+</section>
+    
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+  <div class="container">
+    <p class="footer__copy">
+      © 2023 Группа компаний «Н2О-ТЕХНОЛОГИИ»
+    </p>
+  </div>
+</footer>
+
+</body>
+
+<script src="./js/jquery-3.6.3.min.js"></script>
+<script src="./js/jquery-ui.js"></script>
+<script src="./js/scripts.min.js"></script>
+
+</html>
