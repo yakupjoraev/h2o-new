@@ -2207,6 +2207,7 @@ a.ui-button:active,
 }
 
 .nav__link-text {
+  white-space: nowrap;
   font-weight: 600;
   font-size: 1rem;
   line-height: 1.375rem;
@@ -2275,6 +2276,10 @@ a.ui-button:active,
 
 .nav__link:last-child .nav__link-text {
   color: var(--text-color);
+}
+
+.header-archive .nav-cards .nav__link:nth-child(3) {
+  margin-left: 0;
 }
 
 .footer {
@@ -4022,6 +4027,12 @@ a.ui-button:active,
   .second-title {
     font-size: 1.25rem;
     line-height: 1.375rem;
+  }
+
+  .nav-cards {
+    -webkit-column-gap: 20px;
+       -moz-column-gap: 20px;
+            column-gap: 20px;
   }
 
   .nav__link:first-child {

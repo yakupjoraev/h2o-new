@@ -19,6 +19,7 @@
   // .nav__link-text
 
   &__link-text {
+    white-space: nowrap;
     font-weight: 600;
     font-size: rem(16);
     line-height: rem(22);
@@ -36,6 +37,11 @@
   display: flex;
   align-items: center;
   column-gap: 76px;
+
+  @media (max-width: $breakpoint992) {
+    column-gap: 20px;
+  }
+
 
   & .nav__link:nth-child(2) {
 
@@ -77,5 +83,14 @@
 
   .nav__link-text {
     color: var(--text-color);
+  }
+}
+
+.header-archive {
+  .nav-cards {
+
+    & .nav__link:nth-child(3) {
+      margin-left: 0;
+    }
   }
 }
