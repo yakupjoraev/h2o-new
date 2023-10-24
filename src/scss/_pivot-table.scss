@@ -432,6 +432,15 @@
     .table-form__datepicker-input {
       width: 100%;
     }
+
+    .table-form__select-group {
+      flex: 0 1 auto;
+    }
+
+    .cards-select-group::before {
+      top: auto;
+      bottom: 9px;
+    }
   }
 
   @media (max-width: $breakpoint480) {
@@ -448,9 +457,13 @@
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $breakpoint480) {
+  @media (max-width: $breakpoint992) {
     flex-direction: column;
     gap: 20px;
+    width: 100%;
+  }
+
+  @media (max-width: $breakpoint480) {
     width: fit-content;
   }
 }

@@ -220,7 +220,7 @@
   // .cards__item--green
 
   &__item--green {
-    background: linear-gradient(0deg, rgba(208, 255, 210, 0.20) 0%, rgba(208, 255, 210, 0.20) 100%), #FFF;
+    background: linear-gradient(0deg, rgba(208, 255, 210, 0.60) 0%, rgba(208, 255, 210, 0.60) 100%), #FFF;
   }
 }
 
@@ -307,8 +307,30 @@
   }
 
   .table-form__btn {
-    flex: 0 1 rem(284);
+    flex: 0 1 rem(272);
     width: 100%;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  .table-form__btn.btn-disable {
+    flex: 0 0 rem(272);
+    width: 100%;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
+  }
+
+  .table-form__btn.btn-primary {
+    flex: 0 0 rem(218);
+    width: 100%;
+
+    @media (max-width: $breakpoint992) {
+      flex: 0 1 auto;
+    }
   }
 
   .pivot-table__form {
@@ -396,4 +418,21 @@
   font-weight: 500;
   line-height: normal;
   color: var(--main-color);
+}
+
+.cards__item-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px 7px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: -15px;
+  border-radius: 3px 0px 0px 3px;
+  background: #00C744;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 151%;
+  color: var(--White, #FFF);
 }
