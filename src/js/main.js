@@ -128,6 +128,32 @@ $(function () {
     buttonText: "Выбрать дату",
   });
 
+  $("#datepicker-122").datepicker({
+    changeMonth: false,
+    changeYear: true,
+    showOn: "button",
+    buttonImage: "./img/icons/datepicker.svg",
+    // buttonImageOnly: true,
+    buttonText: "Выбрать дату",
+  });
+
+  $("#datepicker-133").datepicker({
+    changeMonth: false,
+    changeYear: true,
+    showOn: "button",
+    buttonImage: "./img/icons/datepicker.svg",
+    // buttonImageOnly: true,
+    buttonText: "Выбрать дату",
+  });
+
+  $("#datepicker-144").datepicker({
+    changeMonth: false,
+    changeYear: true,
+    showOn: "button",
+    buttonImage: "./img/icons/datepicker.svg",
+    // buttonImageOnly: true,
+    buttonText: "Выбрать дату",
+  });
 
 
   /* Локализация datepicker */
@@ -212,6 +238,56 @@ function filtersArchive() {
 }
 
 filtersArchive();
+
+function cardCommentTooltip() {
+  const commentTexts = document.querySelectorAll('[data-card-comment-text]');
+
+  commentTexts.forEach(commentText => {
+    const tooltip = commentText.querySelector('[data-card-comment-tooltip]');
+    const commentTextContent = commentText.querySelector('.cards__item-comments-text');
+
+    const text = commentTextContent.textContent;
+
+    if (text.length > 70) {
+      const truncated = text.substring(0, 70) + "...";
+      commentTextContent.textContent = truncated;
+
+      commentText.addEventListener('mouseover', function () {
+        tooltip.textContent = text;
+        tooltip.style.display = "block";
+      });
+
+      commentText.addEventListener('mouseout', function () {
+        tooltip.style.display = "none";
+      });
+    }
+  });
+}
+
+cardCommentTooltip();
+
+function historyLogs() {
+
+  let historyBlocks = document.querySelectorAll('[data-history-block]');
+
+  if (!historyBlocks) {
+    return null
+  }
+
+  historyBlocks.forEach(historyBlock => {
+    const historyBtn = historyBlock.querySelector('[data-history-btn]');
+
+    historyBtn.addEventListener('click', () => {
+      historyBlock.classList.toggle('active')
+    })
+  });
+
+
+}
+
+historyLogs();
+
+
 
 const getTemplate = (data = [], placeholder, selectedId) => {
   let text = placeholder ?? 'placeholder не указан';
@@ -394,23 +470,24 @@ const select3 = new Select('#select3', {
     input.value = item.value;
   },
 });
+
+// Инициализация плагина
+const select4 = new Select('#select4', {
+  placeholder: 'Выберите элемент',
+  selectedId: '15',
+  data: [
+    { id: '11', value: 'Ожидание' },
+    { id: '12', value: 'Ожидание оплаты' },
+    { id: '13', value: 'Оплачено' },
+    { id: '14', value: 'В работе' },
+    { id: '15', value: 'Выполнено' },
+  ],
+  onSelect(item) {
+    const input = document.querySelector('#select3 .hidden__input');
+    input.value = item.value;
+  },
+});
 // Вызываем метод updateCircleColor для установки цвета круга по умолчанию
 select.updateCircleColor(select.current.value);
 
 
-function historyLogs() {
-
-  const historyBlock = document.querySelector('[data-history-block]');
-
-  if (!historyBlock) {
-    return null
-  }
-
-  const historyBtn = document.querySelector('[data-history-btn]');
-
-  historyBtn.addEventListener('click', () => {
-    historyBlock.classList.toggle('active')
-  })
-}
-
-historyLogs();
